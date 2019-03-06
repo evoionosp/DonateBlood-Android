@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" >
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/saperator_height"
+                android:background="@color/colorAccent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/title_personal_details"
+                android:textStyle="bold"
+                android:background="@color/colorAccent"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/card_margin"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_medium"
+                android:orientation="vertical"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFirstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFirstname"
+                        android:inputType="textCapWords"
+                        android:hint="@string/reg_fname_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLastname"
+                    android:paddingTop="@dimen/space_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLastname"
+                        android:inputType="textCapWords"
+                        android:hint="@string/reg_lname_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_marginTop="@dimen/space_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rg_sex"
+                    android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/space_large"
+                        android:text="@string/male" />
+                <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/space_large"
+                        android:checked="true"
+                        android:text="@string/female" />
+            </RadioGroup>
+
+            <androidx.legacy.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/space_small"
+                    android:src="@drawable/ic_bloodgroup"/>
+            <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spBloodgroup"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/BloodGroup"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_small">
+    
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDOB"
+                    android:layout_weight="1"
+                    android:paddingRight="@dimen/space_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.santalu.maskedittext.MaskEditText
+                        android:id="@+id/etDOB"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/reg_dob_hint"
+                        app:met_mask="##-##-####"/>
+            </com.google.android.material.textfield.TextInputLayout>
+    
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilWeight"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/space_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.santalu.maskedittext.MaskEditText
+                        android:id="@+id/etWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/reg_weight_lb_hint"
+                        app:met_mask="### lbs"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+       
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMobile"
+                android:paddingTop="@dimen/space_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.santalu.maskedittext.MaskEditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/reg_mobile_hint"
+                    android:inputType="phone"
+                    app:met_mask="+1(###)###-####"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_marginTop="@dimen/space_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/reg_email_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPostalCode"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            <com.santalu.maskedittext.MaskEditText
+                    android:id="@+id/etPostalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/reg_postalcode_hint"
+                    android:inputType="textCapCharacters"
+                    app:met_mask="### ###"/>
+            </com.google.android.material.textfield.TextInputLayout>
+    
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+    
+    android:layout_marginTop="@dimen/space_medium">
+    
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/saperator_height"
+                android:background="@color/colorAccent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/title_check_eligibility"
+                android:textStyle="bold"
+                android:background="@color/colorAccent"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/card_margin"/>
+    
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+    
+            <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/eligible_age"/>
+            
+            <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbTattoo"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/eligible_tattoo"/>
+    
+            <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbUS"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/eligible_us"/>
+    
+            <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbSurgery"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/eligible_surgery"/>
+    
+            <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbBaby"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/eligible_baby"/>
+    
+            <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbUK"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/eligible_uk"/>
+    
+            <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbMedicine"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/eligible_medicine"/>
+    
+            <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@string/eligible_weight"/>
+            
+    
+    
+            
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    
+    
+</ScrollView>

@@ -1,0 +1,73 @@
+<resources>
+	<string name="app_name">DonateBlood</string>
+	<string name="loading">Loading…</string>
+	
+	<string name="navigation_drawer_open">Open navigation drawer</string>
+	<string name="navigation_drawer_close">Close navigation drawer</string>
+	
+	<string name="login">Login</string>
+	<string name="no_internet">No Internet Connection</string>
+	<string name="connected">Connected to Network</string>
+	<string name="hint_mobile_number">Mobile Number</string>
+	<string name="verify">Verify</string>
+	
+	
+	<string name="settings">Settings</string>
+	<string name="please_wait">Please Wait…</string>
+	<string name="continue_with_email">Continue with Email ID</string>
+	<string name="error_signin">Error while signing in</string>
+	<string name="try_again">Try Again</string>
+	<string name="cancel">Cancel</string>
+	<string name="submit">Submit</string>
+	<string name="ok">OK</string>
+	<string name="retry">Retry</string>
+	<string name="reg_fname_hint">Firstname</string>
+	<string name="reg_lname_hint">Lastname</string>
+	<string name="reg_uname_hint">Username</string>
+	<string name="reg_dob_hint">Birth Date</string>
+	<string name="reg_email_hint">Email ID</string>
+	<string name="reg_mobile_hint">Mobile Number</string>
+	<string name="reg_postalcode_hint">Postal Code (i.e. A1B 2C3)</string>
+	<string name="title_personal_details">PERSONAL DETAILS</string>
+	<string name="number">Number</string>
+	<string name="male">Male</string>
+	<string name="other">Other</string>
+	<string name="female">Female</string>
+	<string name="registration">Registration</string>
+	<string name="error">Error</string>
+	<string name="something_wrong">Sorry! Something went wrong.</string>
+	<string name="continue_with_google">Continue with Google</string>
+	
+	<string-array name="BloodGroup">
+		<item>BloodGroup</item>
+		<item>A+</item>
+		<item>A-</item>
+		<item>B+</item>
+		<item>B-</item>
+		<item>O+</item>
+		<item>O-</item>
+		<item>AB+</item>
+		<item>AB-</item>
+	</string-array>
+
+	<string name="done">Done</string>
+	<string name="err_valid_name">Enter valid name !</string>
+	<string name="err_valid_tel">Enter valid phone number !</string>
+	<string name="err_valid_email">Enter valid email Id !</string>
+	<string name="err_valid_dob">Enter valid date of birth !</string>
+	<string name="reg_weight_lb_hint">Weight (lbs)</string>
+	<string name="eligible_weight">I weigh more than 110 lbs.</string>
+	<string name="eligible_medicine">I am npt taking prescription medications.</string>
+	<string name="eligible_uk">I have not spent 3 months or more cumulatively in the United Kingdom.</string>
+	<string name="eligible_baby">I have not been pregnant or had a baby in the last 6 months.</string>
+	<string name="eligible_surgery">I have not had a cleaning or a filling today, or dental surgery in last 72 hours.
+	</string>
+	<string name="eligible_us">I have not travelled outside Canada or the continental U.S. in the last 12 months.
+	</string>
+	<string name="eligible_tattoo">I have not had a tattoo or piercing in the last 3 months.</string>
+	<string name="eligible_age">I am over 17 years old.</string>
+	<string name="title_check_eligibility">Check Eligibility</string>
+	<string name="err_not_eligible">You are not eligible for donation</string>
+	<string name="err_select_spinner">Please select</string>
+
+</resources>

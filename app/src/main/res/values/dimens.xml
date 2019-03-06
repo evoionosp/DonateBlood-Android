@@ -1,0 +1,34 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">300dp</dimen>
+    <dimen name="item_width">200dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="edittext_radius">3dp</dimen>
+    <dimen name="button_radius">3dp</dimen>
+    <dimen name="card_radius">3dp</dimen>
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="saperator_height">4dp</dimen>
+    <dimen name="space_large">20dp</dimen>
+    <dimen name="space_medium">10dp</dimen>
+    <dimen name="space_small">5dp</dimen>
+    <dimen name="text_medium">20sp</dimen>
+    <dimen name="text_large">30sp</dimen>
+    <dimen name="text_xlarge">35sp</dimen>
+    <dimen name="space_xlarge">40dp</dimen>
+    <dimen name="default_border">16dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_large">15dp</dimen>
+    <dimen name="font_l">25sp</dimen>
+    <dimen name="font_s">15sp</dimen>
+    <dimen name="font_m">20sp</dimen>
+</resources>
