@@ -3,16 +3,13 @@
 
 
         <item
-            android:id="@+id/home"
-            android:title="Home" />
+            android:id="@+id/menuMap"
+            android:title="@string/map_view" />
         <item
-            android:id="@+id/patient_list"
-            android:title="Patient List" />
+            android:id="@+id/menuAppointment"
+            android:title="@string/book_appointment" />
         <item
-            android:id="@+id/add_patient"
-            android:title="Add Patient" />
-        <item
-            android:id="@+id/record_list"
-            android:title="Record List" />
+            android:id="@+id/menuAbout"
+            android:title="@string/about_us" />
 
 </menu>

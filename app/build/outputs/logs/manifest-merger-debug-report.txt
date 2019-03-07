@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-49:12
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-75:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\22237a388a41098549eb51090cf6e6d0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.santalu:mask-edittext:1.1.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\mask-edittext-1.1.1.aar\4450034fce780c0a0d83e9e9b54d4dd9\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.thyrlian:AwesomeValidation:v4.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-AwesomeValidation-v4.2.aar\6f32d9c7d5282d67e89ad09a610c9fdf\AndroidManifest.xml:2:1-11:12
@@ -16,6 +16,10 @@ MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\Local User\.
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-18.1.0.aar\ac17f89811e7b2a13e0f29a345abea6d\AndroidManifest.xml:2:1-24:12
 MERGED from [com.fxn769:stash:1.3.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\stash-1.3.2.aar\d8e08823d13b523fda4f17336a45d05e\AndroidManifest.xml:2:1-12:12
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\0b8aba59bd7a44651e78a80cdb935eae\AndroidManifest.xml:2:1-11:12
+MERGED from [net.sharewire:google-maps-clustering:0.1.3] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-google-maps-clustering-0.1.3.aar\afa2242188bcc07dabb6d987f8965574\AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.2.aar\306dcd9735cb1de5bbaa40f409ccee46\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\3b2f7d026b2e757716d6d5505d53c84d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-interop-16.0.1.aar\6d289b7d94e612698fae6667532d3a6e\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-api-phone-16.0.0.aar\d0ff8d47935086e38ad6bd0e05036d8b\AndroidManifest.xml:2:1-7:12
@@ -39,8 +43,6 @@ MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Loca
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\firebase-database-collection-16.0.1.aar\b9f04268fc4a3ac782d936489a11ee0f\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-16.0.1.aar\b4a22fc47aca5fa7be15ddd871597016\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\74ccef07253a1ad57b43dfbf9b5b9753\AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.2.aar\306dcd9735cb1de5bbaa40f409ccee46\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\5ddeda382183554cb9487fdc235fa447\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\f25fd78a4711d0a92792a93616c796d1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\b6a26350b67b17a38e021aa0020c7a23\AndroidManifest.xml:17:1-22:12
@@ -71,29 +73,35 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Local User\.grad
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\2de6cc72d660b00b8eb889ea6b11aa46\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\1a4984987770bab47e2b22012cdc6dd0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\822f3ef010c9aaa3631f0298547c5281\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-75:12
 	package
 		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:3:11-47
 		INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml
 		INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-49:12
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-49:12
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:10:2-75
+	android:name
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:10:19-73
 uses-permission#android.permission.INTERNET
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:5:2-63
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:11:2-63
 MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-database-16.1.0.aar\810032dd3e8586e8fe1a82996c4c7693\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-database-16.1.0.aar\810032dd3e8586e8fe1a82996c4c7693\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-18.1.0.aar\ac17f89811e7b2a13e0f29a345abea6d\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-18.1.0.aar\ac17f89811e7b2a13e0f29a345abea6d\AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-appinvite:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-appinvite-16.1.0.aar\fe4d34cea9334d24f10aa4c94bb7fbd5\AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-appinvite:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-appinvite-16.1.0.aar\fe4d34cea9334d24f10aa4c94bb7fbd5\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-analytics-16.0.6.aar\722699d6817e4d2d9e97aeb45aafca9a\AndroidManifest.xml:23:5-67
@@ -103,9 +111,9 @@ MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Local 
 MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-iid-17.0.3.aar\c9b5895b3b1615f24cc9a71aaaa67cfe\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-iid-17.0.3.aar\c9b5895b3b1615f24cc9a71aaaa67cfe\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:5:19-61
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:11:19-61
 application
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:7:2-47:16
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:13:2-73:16
 MERGED from [com.github.santalu:mask-edittext:1.1.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\mask-edittext-1.1.1.aar\4450034fce780c0a0d83e9e9b54d4dd9\AndroidManifest.xml:11:5-20
 MERGED from [com.github.santalu:mask-edittext:1.1.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\mask-edittext-1.1.1.aar\4450034fce780c0a0d83e9e9b54d4dd9\AndroidManifest.xml:11:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\58a41c381ee3fa65eeb29c556381843d\AndroidManifest.xml:9:5-20
@@ -124,6 +132,12 @@ MERGED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-18.1.0.aar\ac17f89811e7b2a13e0f29a345abea6d\AndroidManifest.xml:16:5-22:19
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\0b8aba59bd7a44651e78a80cdb935eae\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\0b8aba59bd7a44651e78a80cdb935eae\AndroidManifest.xml:9:5-20
+MERGED from [net.sharewire:google-maps-clustering:0.1.3] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-google-maps-clustering-0.1.3.aar\afa2242188bcc07dabb6d987f8965574\AndroidManifest.xml:12:5-20
+MERGED from [net.sharewire:google-maps-clustering:0.1.3] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-google-maps-clustering-0.1.3.aar\afa2242188bcc07dabb6d987f8965574\AndroidManifest.xml:12:5-20
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-interop-16.0.1.aar\6d289b7d94e612698fae6667532d3a6e\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-interop-16.0.1.aar\6d289b7d94e612698fae6667532d3a6e\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-appinvite:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-appinvite-16.1.0.aar\fe4d34cea9334d24f10aa4c94bb7fbd5\AndroidManifest.xml:24:5-35:19
@@ -158,8 +172,6 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\User
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-identifier-16.0.0.aar\0ccb1205d1596dc701722a0c50096e73\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\c6068686d600efe487cd49a34769f852\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\c6068686d600efe487cd49a34769f852\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:22:5-20
 MERGED from [androidx.core:core:1.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\core-1.0.1.aar\d195e75ca758c336f1bd9e160163a82f\AndroidManifest.xml:22:5-89
 MERGED from [androidx.core:core:1.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\core-1.0.1.aar\d195e75ca758c336f1bd9e160163a82f\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\223106723af922e370527724fd63d095\AndroidManifest.xml:22:5-23:19
@@ -167,79 +179,91 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Lo
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\core-1.0.1.aar\d195e75ca758c336f1bd9e160163a82f\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:14:4-30
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:20:4-30
 	android:label
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:12:4-36
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:18:4-36
 	android:fullBackupContent
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:10:4-37
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:16:4-37
 	android:roundIcon
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:13:4-49
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:19:4-49
 	android:icon
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:11:4-38
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:17:4-38
 	android:allowBackup
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:9:4-31
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:15:4-31
 	android:theme
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:15:4-35
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:21:4-35
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:8:4-29
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:14:4-29
+meta-data#com.google.android.geo.API_KEY
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:31:3-33:46
+	android:value
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:33:5-44
+	android:name
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:32:5-50
+activity#com.centennial.donateblood.activities.MapsActivity
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:35:3-39:14
+	android:label
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:37:5-48
+	android:name
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:36:5-44
 activity#com.centennial.donateblood.activities.SplashActivity
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:16:3-24:14
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:40:3-49:14
 	android:configChanges
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:18:5-66
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:42:5-66
 	android:theme
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:19:5-38
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:43:5-38
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:17:5-46
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:41:5-46
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:20:4-23:20
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:44:4-48:20
 action#android.intent.action.MAIN
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:21:5-56
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:45:5-56
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:21:13-54
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:45:13-54
 category#android.intent.category.LAUNCHER
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:22:5-64
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:47:5-64
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:22:15-62
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:47:15-62
 activity#com.centennial.donateblood.activities.LoginActivity
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:25:3-37:14
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:50:3-64:14
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:25:13-53
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:50:13-53
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:donatebloodca.page.link+data:host:donatebloodca.page.link+data:scheme:http+data:scheme:https
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:26:4-36:20
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:51:4-63:20
 action#android.intent.action.VIEW
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:27:5-56
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:52:5-56
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:27:13-54
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:52:13-54
 category#android.intent.category.DEFAULT
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:28:5-63
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:54:5-63
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:28:15-61
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:54:15-61
 category#android.intent.category.BROWSABLE
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:29:5-65
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:55:5-65
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:29:15-63
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:55:15-63
 data
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:30:5-32:30
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:57:5-59:30
 	android:host
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:31:7-45
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:58:7-45
 	android:scheme
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:32:7-28
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:59:7-28
 activity#com.centennial.donateblood.activities.MainActivity
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:39:3-44:14
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:65:3-69:14
 	android:screenOrientation
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:41:5-41
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:67:5-41
 	android:theme
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:42:5-48
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:68:5-48
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:40:5-44
-activity#com.centennial.donateblood.activities.BaseActivity
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:45:3-54
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:66:5-44
+activity#com.centennial.donateblood.utils.BaseActivity
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:70:3-49
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:45:13-52
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:70:13-47
 activity#com.centennial.donateblood.activities.RegistrationActivity
-ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:46:3-62
+ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:71:3-62
 	android:name
-		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:46:13-60
+		ADDED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml:71:13-60
 uses-sdk
 INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\src\main\AndroidManifest.xml
@@ -268,6 +292,14 @@ MERGED from [com.fxn769:stash:1.3.2] C:\Users\Local User\.gradle\caches\transfor
 MERGED from [com.fxn769:stash:1.3.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\stash-1.3.2.aar\d8e08823d13b523fda4f17336a45d05e\AndroidManifest.xml:8:5-10:41
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\0b8aba59bd7a44651e78a80cdb935eae\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\0b8aba59bd7a44651e78a80cdb935eae\AndroidManifest.xml:5:5-7:41
+MERGED from [net.sharewire:google-maps-clustering:0.1.3] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-google-maps-clustering-0.1.3.aar\afa2242188bcc07dabb6d987f8965574\AndroidManifest.xml:8:5-10:41
+MERGED from [net.sharewire:google-maps-clustering:0.1.3] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-google-maps-clustering-0.1.3.aar\afa2242188bcc07dabb6d987f8965574\AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.2.aar\306dcd9735cb1de5bbaa40f409ccee46\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.2.aar\306dcd9735cb1de5bbaa40f409ccee46\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\3b2f7d026b2e757716d6d5505d53c84d\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\3b2f7d026b2e757716d6d5505d53c84d\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-interop-16.0.1.aar\6d289b7d94e612698fae6667532d3a6e\AndroidManifest.xml:5:5-44
@@ -314,10 +346,6 @@ MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\Loc
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-16.0.1.aar\b4a22fc47aca5fa7be15ddd871597016\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\74ccef07253a1ad57b43dfbf9b5b9753\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\74ccef07253a1ad57b43dfbf9b5b9753\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\32494db1fc10d4b27646df851f27905d\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.2.aar\306dcd9735cb1de5bbaa40f409ccee46\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.2.aar\306dcd9735cb1de5bbaa40f409ccee46\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\5ddeda382183554cb9487fdc235fa447\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\5ddeda382183554cb9487fdc235fa447\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\f25fd78a4711d0a92792a93616c796d1\AndroidManifest.xml:20:5-44
@@ -456,6 +484,8 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-database:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-database-16.1.0.aar\810032dd3e8586e8fe1a82996c4c7693\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-18.1.0.aar\ac17f89811e7b2a13e0f29a345abea6d\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-18.1.0.aar\ac17f89811e7b2a13e0f29a345abea6d\AndroidManifest.xml:13:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-analytics-16.0.6.aar\722699d6817e4d2d9e97aeb45aafca9a\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-analytics-16.0.6.aar\722699d6817e4d2d9e97aeb45aafca9a\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-analytics-impl-16.2.4.aar\b7240dfe92dcbc7f1fc3b6a73c55f034\AndroidManifest.xml:24:5-79
@@ -478,6 +508,18 @@ ADDED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\.
 		ADDED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-18.1.0.aar\ac17f89811e7b2a13e0f29a345abea6d\AndroidManifest.xml:20:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore:18.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-18.1.0.aar\ac17f89811e7b2a13e0f29a345abea6d\AndroidManifest.xml:19:17-111
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:28:9-32
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\a575cf33859d6dc026ea59c9c925a537\AndroidManifest.xml:34:13-50
 activity#com.google.android.gms.appinvite.PreviewActivity
 ADDED from [com.google.android.gms:play-services-appinvite:16.1.0] C:\Users\Local User\.gradle\caches\transforms-1\files-1.1\jetified-play-services-appinvite-16.1.0.aar\fe4d34cea9334d24f10aa4c94bb7fbd5\AndroidManifest.xml:25:9-34:20
 	android:exported
