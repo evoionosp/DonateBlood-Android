@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:id="@+id/nav_header"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Login / Register"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:id="@+id/navUser"
+        android:textColor="#c8ffffff"
+        android:textSize="20dp"
+        android:clickable="true"
+        android:onClick="onClickLogin"
+        android:layout_alignTop="@+id/navImage"
+        android:layout_toRightOf="@+id/navImage"
+        android:layout_toEndOf="@+id/navImage"
+        android:layout_marginLeft="10dp" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_person"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#4dffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/navPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User ID"
+        android:textColor="#97ffffff"
+        android:clickable="true"
+        android:onClick="onClickLogin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/navUser"
+        android:layout_alignStart="@+id/navUser" />
+
+</RelativeLayout>

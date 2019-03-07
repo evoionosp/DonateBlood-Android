@@ -114,14 +114,13 @@
                     android:paddingRight="@dimen/space_medium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                <com.santalu.maskedittext.MaskEditText
+                <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDOB"
                         android:clickable="false"
                         android:focusable="false"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/reg_dob_hint"
-                        app:met_mask="##-##-####"/>
+                        android:hint="@string/reg_dob_hint"/>
             </com.google.android.material.textfield.TextInputLayout>
     
             <com.google.android.material.textfield.TextInputLayout
@@ -135,7 +134,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/reg_weight_lb_hint"
-                        app:met_mask="### lbs"/>
+                        app:met_mask="###"/>
             </com.google.android.material.textfield.TextInputLayout>
             
         </androidx.appcompat.widget.LinearLayoutCompat>

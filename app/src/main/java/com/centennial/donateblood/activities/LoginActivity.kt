@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.centennial.donateblood.R
+import com.centennial.donateblood.utils.BaseActivity
 import com.fxn.stash.Stash
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount

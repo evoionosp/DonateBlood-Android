@@ -1,4 +1,4 @@
-package com.centennial.donateblood.activities
+package com.centennial.donateblood.utils
 
 
 import android.app.ProgressDialog

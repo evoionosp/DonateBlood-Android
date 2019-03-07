@@ -55,7 +55,11 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name="com.centennial.donateblood.activities.MainActivity" />
+        <activity
+            android:name="com.centennial.donateblood.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
         <activity android:name="com.centennial.donateblood.activities.BaseActivity" />
         <activity android:name="com.centennial.donateblood.activities.RegistrationActivity" />
         <activity

@@ -1,7 +1,9 @@
 package com.centennial.donateblood.activities
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Patterns
@@ -13,6 +15,7 @@ import com.basgeekball.awesomevalidation.AwesomeValidation
 import com.basgeekball.awesomevalidation.ValidationStyle
 import com.basgeekball.awesomevalidation.utility.custom.SimpleCustomValidation
 import com.centennial.donateblood.R
+import com.centennial.donateblood.utils.BaseActivity
 import com.google.common.collect.Range
 import kotlinx.android.synthetic.main.activity_registration.*
 import java.text.ParseException
@@ -27,7 +30,7 @@ class RegistrationActivity: BaseActivity() {
     private lateinit var mValidation: AwesomeValidation
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registration)
+        setContentView(com.centennial.donateblood.R.layout.activity_registration)
         title = getString(com.centennial.donateblood.R.string.registration)
         myCalendar = Calendar.getInstance()
         mValidation = AwesomeValidation(ValidationStyle.BASIC)
@@ -72,12 +75,12 @@ class RegistrationActivity: BaseActivity() {
                 try {
                     val calendarBirthday = Calendar.getInstance()
                     val calendarToday = Calendar.getInstance()
-                    calendarBirthday.time = SimpleDateFormat("mm/dd/yyyy", Locale.US).parse(input)
+                    calendarBirthday.time = SimpleDateFormat("MM/dd/yyyy", Locale.US).parse(input)
                     val yearOfToday = calendarToday.get(Calendar.YEAR)
                     val yearOfBirthday = calendarBirthday.get(Calendar.YEAR)
-                    if (yearOfToday - yearOfBirthday > 18) {
+                    if (yearOfToday - yearOfBirthday > 17) {
                         return@SimpleCustomValidation true
-                    } else if (yearOfToday - yearOfBirthday == 18) {
+                    } else if (yearOfToday - yearOfBirthday == 17) {
                         val monthOfToday = calendarToday.get(Calendar.MONTH)
                         val monthOfBirthday = calendarBirthday.get(Calendar.MONTH)
                         if (monthOfToday > monthOfBirthday) {
@@ -92,7 +95,7 @@ class RegistrationActivity: BaseActivity() {
                     e.printStackTrace()
                 }
                 false
-            }, R.string.err_valid_dob
+            }, com.centennial.donateblood.R.string.err_valid_dob
         )
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.spBloodgroup,
             { validationHolder ->
@@ -112,8 +115,29 @@ class RegistrationActivity: BaseActivity() {
 
     fun submitForm() {
        if (mValidation.validate()){
-           // TODO: Submit data to firebase
+           if(checkEligibility()) {
+               // TODO: Submit data to firebase
+               startActivity(Intent(this, MainActivity::class.java))
+           } else {
+               AlertDialog.Builder(this)
+                   .setTitle(getString(com.centennial.donateblood.R.string.title_check_eligibility))
+                   .setMessage(getString(com.centennial.donateblood.R.string.err_not_eligible))
+                   .setNeutralButton(R.string.ok){_,_ ->
+                       //dismiss
+                   }
+
+                   // Specifying a listener allows you to take an action before dismissing the dialog.
+                   // The dialog is automatically dismissed when a dialog button is clicked.
+                   .setIcon(android.R.drawable.ic_dialog_alert)
+                   .show()
+           }
        }
+    }
+
+
+    fun checkEligibility(): Boolean {
+        return cbAge.isChecked && cbBaby.isChecked && cbMedicine.isChecked && cbSurgery.isChecked && cbUK.isChecked && cbUS.isChecked && cbWeight.isChecked && cbTattoo.isChecked
+
     }
 
 
@@ -126,7 +150,7 @@ class RegistrationActivity: BaseActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.regSubmit -> {
+            com.centennial.donateblood.R.id.regSubmit -> {
                 submitForm()
             }
         }

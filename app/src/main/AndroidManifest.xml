@@ -35,8 +35,14 @@
 						android:scheme="https"/>
 			</intent-filter>
 		</activity>
-		<activity android:name=".activities.MainActivity"/>
-		<activity android:name=".activities.BaseActivity"/>
+		
+		<activity
+				android:name=".activities.MainActivity"
+				android:screenOrientation="portrait"
+				android:theme="@style/AppTheme.NoActionBar">
+			
+		</activity>
+		<activity android:name=".utils.BaseActivity"/>
 		<activity android:name=".activities.RegistrationActivity"/>
 	</application>
 

@@ -8,6 +8,15 @@
 		<item name="colorAccent">@color/colorAccent</item>
 		<item name="android:actionMenuTextAppearance">@style/MyActionBar.MenuTextStyle</item>
 	</style>
+	
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+		<item name="android:textColorPrimary">@color/white</item>
+		<item name="android:textColorSecondary">@color/white</item>
+	</style>
+	
+	
+	
+	
 	<style name="MyActionBar.MenuTextStyle" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
 		<item name="android:textAllCaps">true</item>
 		<item name="android:textStyle">bold</item>
@@ -29,8 +38,37 @@
 		<item name="android:windowContentOverlay">@null</item>
 	</style>
 	
+	
+	
+	
+	
+	<style name="AppTheme.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+	
+	
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+	
+	<style name="AppFullScreenTheme" parent="@style/AppTheme.NoActionBar">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+	
+	<style name="FullscreenTheme" parent="AppTheme">
+		<item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+		<item name="android:windowActionBarOverlay">true</item>
+		<item name="android:windowBackground">@null</item>
+		<item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+		<item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+	</style>
+	
 	<style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
 		<item name="android:background">@color/black_overlay</item>
 	</style>
+
+
 
 </resources>
