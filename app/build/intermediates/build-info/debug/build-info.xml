@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.3.2"
-    timestamp="1551857570904"
+    timestamp="1551919803585"
     token="5002835395381622261"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -29,34 +29,32 @@
 
     <build
         build-mode="FULL"
-        timestamp="1551852582506"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1551918643992"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
@@ -65,31 +63,27 @@
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1551918722328"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1551855949261"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1551856837864"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -101,7 +95,7 @@
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -109,11 +103,17 @@
         <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1551857201482"
+        timestamp="1551919674685"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -121,7 +121,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1551857570904"
+        timestamp="1551919803585"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\STUDY\Centennial_MAD\SEM_2\ANDROID_726\DonateBlood\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
