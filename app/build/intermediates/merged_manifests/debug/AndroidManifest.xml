@@ -54,10 +54,6 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.centennial.donateblood.activities.MapsActivity"
-            android:label="@string/title_activity_maps" >
-        </activity>
-        <activity
             android:name="com.centennial.donateblood.activities.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/FullScreen" >
@@ -76,10 +72,10 @@
 
                 <data
                     android:host="donatebloodca.page.link"
-                    android:scheme="http" />
+                    android:scheme="https" />
                 <data
                     android:host="donatebloodca.page.link"
-                    android:scheme="https" />
+                    android:scheme="http" />
             </intent-filter>
         </activity>
         <activity

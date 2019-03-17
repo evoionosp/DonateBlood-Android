@@ -6,6 +6,7 @@ import android.os.Handler
 import android.util.Log
 import com.centennial.donateblood.R
 import com.centennial.donateblood.utils.BaseActivity
+import com.centennial.donateblood.utils.Constants
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -30,7 +31,7 @@ class SplashActivity : BaseActivity() {
 
         auth = FirebaseAuth.getInstance()
         userDB= FirebaseFirestore.getInstance()
-        dbRef = userDB.collection("users")
+        dbRef = userDB.collection(Constants.USER_DATA_REF)
 
 
         Handler().postDelayed({
@@ -40,11 +41,11 @@ class SplashActivity : BaseActivity() {
 
 
     fun startupRedirect() {
-        val user: FirebaseUser? = auth.currentUser
+        val firebaseUser: FirebaseUser? = auth.currentUser
 
-        if (user != null) {
-            Log.i(TAG, "Login User:"+user.displayName)
-            dbRef.document(user.uid).get()
+        if (firebaseUser != null) {
+            Log.i(TAG, "Login User:"+firebaseUser.displayName)
+            dbRef.document(firebaseUser.uid).get()
                 .addOnSuccessListener { document ->
                     if (document.data != null) {
                         Log.d(TAG, "DocumentSnapshot data: " + document.data)
@@ -70,7 +71,7 @@ class SplashActivity : BaseActivity() {
     }
 
     companion object {
-        private const val TAG = "SplashActivity"
+        private val TAG = this::class.java.simpleName
         private const val SPLASH_TIME_OUT: Long = 3000
     }
 

@@ -6,6 +6,7 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.Menu
 import android.view.MenuItem
@@ -16,7 +17,14 @@ import com.basgeekball.awesomevalidation.ValidationStyle
 import com.basgeekball.awesomevalidation.utility.custom.SimpleCustomValidation
 import com.centennial.donateblood.R
 import com.centennial.donateblood.utils.BaseActivity
+import com.centennial.donateblood.utils.Constants
+import com.centennial.donateblood.utils.User
+import com.google.android.material.snackbar.Snackbar
 import com.google.common.collect.Range
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_registration.*
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -26,6 +34,10 @@ import java.util.*
 class RegistrationActivity: BaseActivity() {
 
     private lateinit var myCalendar: Calendar
+    private var firebaseUser: FirebaseUser? = null
+    private lateinit var auth: FirebaseAuth
+    private lateinit var userDB: FirebaseFirestore
+    private lateinit var dbRef: CollectionReference
 
     private lateinit var mValidation: AwesomeValidation
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +46,11 @@ class RegistrationActivity: BaseActivity() {
         title = getString(com.centennial.donateblood.R.string.registration)
         myCalendar = Calendar.getInstance()
         mValidation = AwesomeValidation(ValidationStyle.BASIC)
+
+        auth = FirebaseAuth.getInstance()
+        userDB= FirebaseFirestore.getInstance()
+        dbRef = userDB.collection(Constants.Companion.USER_DATA_REF)
+        firebaseUser = auth.currentUser
         addValidations(this)
 
         val date = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
@@ -116,8 +133,35 @@ class RegistrationActivity: BaseActivity() {
     fun submitForm() {
        if (mValidation.validate()){
            if(checkEligibility()) {
-               // TODO: Submit data to firebase
-               startActivity(Intent(this, MainActivity::class.java))
+               if(firebaseUser != null){
+
+                   val user = User(firebaseUser!!.uid)
+                   user.birthDate = myCalendar.time
+                   user.bloodGroup = spBloodgroup.selectedItemPosition
+                   user.emailId = etEmail.text.toString()
+                   user.firstName = etFirstname.text.toString()
+                   user.lastName = etLastname.text.toString()
+                   user.isMale = rb_male.isChecked
+                   user.phoneNumber = etMobile.rawText.toString()
+                   user.weight = etWeight.rawText!!.toInt()
+                   user.postalCode = etPostalCode.text.toString()
+                   user.isEligible = true
+
+                   dbRef.document(user.UID).set(user)
+                       .addOnSuccessListener {
+                           Log.d(TAG, "DocumentSnapshot successfully written!")
+                           startActivity(Intent(this, MainActivity::class.java))
+                           finish()
+                       }
+                       .addOnFailureListener {
+                               e -> Log.e(TAG, "Error writing document", e)
+                           Snackbar.make(llCheckbox, "Failed to store data. Make sure you're connected to internet and try again !", Snackbar.LENGTH_LONG).show()
+                       }
+
+               } else {
+                   startActivity(Intent(this, LoginActivity::class.java))
+                   finish()
+               }
            } else {
                AlertDialog.Builder(this)
                    .setTitle(getString(com.centennial.donateblood.R.string.title_check_eligibility))
@@ -158,6 +202,6 @@ class RegistrationActivity: BaseActivity() {
     }
 
     companion object {
-        private const val TAG = "RegistrationActivity"
+        private  val TAG = this::class.java.simpleName
     }
 }
