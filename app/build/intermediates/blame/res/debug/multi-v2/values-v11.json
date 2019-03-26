@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\STUDY\\Centennial_MAD\\SEM_2\\ANDROID_726\\DonateBlood\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "/Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Local User\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-appinvite-16.1.0.aar\\fe4d34cea9334d24f10aa4c94bb7fbd5\\res\\values-v11\\values.xml",
+                    "source": "/Users/shubh/.gradle/caches/transforms-1/files-1.1/jetified-play-services-appinvite-16.1.1.aar/4b01673e067a9cea5f5375c27dbe84ef/res/values-v11/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

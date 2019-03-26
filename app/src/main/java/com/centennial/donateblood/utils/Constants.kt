@@ -18,6 +18,9 @@ class Constants {
         const val BG_AB_NEGATIVE: Int = 8
         const val RARE_TYPE: Int = 9
 
+        val BGArray = arrayListOf<String>("NOT_SELECTED","A+","A-","B+","B-","O+","O-","AB+","AB-","RARE TYPE")
+
+
 
     }
 }

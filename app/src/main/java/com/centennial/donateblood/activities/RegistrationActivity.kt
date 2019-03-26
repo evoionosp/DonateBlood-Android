@@ -16,9 +16,9 @@ import com.basgeekball.awesomevalidation.AwesomeValidation
 import com.basgeekball.awesomevalidation.ValidationStyle
 import com.basgeekball.awesomevalidation.utility.custom.SimpleCustomValidation
 import com.centennial.donateblood.R
+import com.centennial.donateblood.models.User
 import com.centennial.donateblood.utils.BaseActivity
 import com.centennial.donateblood.utils.Constants
-import com.centennial.donateblood.utils.User
 import com.google.android.material.snackbar.Snackbar
 import com.google.common.collect.Range
 import com.google.firebase.auth.FirebaseAuth
@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_registration.*
+import org.joda.time.DateTime
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -83,7 +84,7 @@ class RegistrationActivity: BaseActivity() {
     fun addValidations(activity: Activity){
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etFirstname, "[a-zA-Z]+", com.centennial.donateblood.R.string.err_valid_name)
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etLastname, "[a-zA-Z]+", com.centennial.donateblood.R.string.err_valid_name)
-        mValidation.addValidation(activity, com.centennial.donateblood.R.id.etEmail, Patterns.EMAIL_ADDRESS, com.centennial.donateblood.R.string.err_valid_email)
+        mValidation.addValidation(activity, com.centennial.donateblood.R.id.etDonorNum, Patterns.EMAIL_ADDRESS, com.centennial.donateblood.R.string.err_valid_email)
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etMobile, Patterns.PHONE, com.centennial.donateblood.R.string.err_valid_tel)
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etPostalCode, "[A-Z][0-9][A-Z] [0-9][A-Z][0-9]", com.centennial.donateblood.R.string.err_valid_email)
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etWeight, Range.atLeast(110), com.centennial.donateblood.R.string.err_not_eligible)
@@ -138,7 +139,7 @@ class RegistrationActivity: BaseActivity() {
                    val user = User(firebaseUser!!.uid)
                    user.birthDate = myCalendar.time
                    user.bloodGroup = spBloodgroup.selectedItemPosition
-                   user.emailId = etEmail.text.toString()
+                   user.donorNumber = etDonorNum.text.toString()
                    user.firstName = etFirstname.text.toString()
                    user.lastName = etLastname.text.toString()
                    user.isMale = rb_male.isChecked
@@ -146,6 +147,7 @@ class RegistrationActivity: BaseActivity() {
                    user.weight = etWeight.rawText!!.toInt()
                    user.postalCode = etPostalCode.text.toString()
                    user.isEligible = true
+                   user.lastDonationDate = DateTime.now().minusYears(1).toDate()
 
                    dbRef.document(user.UID).set(user)
                        .addOnSuccessListener {

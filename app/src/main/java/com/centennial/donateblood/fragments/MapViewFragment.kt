@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
-import com.centennial.donateblood.activities.MapMarker
-import com.centennial.donateblood.activities.RandomLocationGenerator
+import com.centennial.donateblood.models.MapMarker
+import com.centennial.donateblood.utils.RandomLocationGenerator
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds

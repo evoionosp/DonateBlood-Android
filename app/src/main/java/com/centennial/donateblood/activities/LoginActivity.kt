@@ -21,7 +21,6 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
 import com.google.firebase.firestore.CollectionReference
@@ -48,6 +47,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         //FirebaseApp.initializeApp(this)
         setContentView(R.layout.activity_login)
         title = getString(R.string.login)
+        Stash.init(this)
         modifyGoogleButton()
         // Button listeners
         btnLoginWithGoogle.setOnClickListener(this)
@@ -68,6 +68,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
         FirebaseDynamicLinks.getInstance().getDynamicLink(intent)
             .addOnSuccessListener(this) {
+
                     verifySignInLink(intent)
             }
             .addOnFailureListener(this) { e ->
@@ -100,7 +101,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e)
                 // [START_EXCLUDE]
-                redirectTo(null)
+                redirectTo(auth.currentUser, dbRef, this)
                 // [END_EXCLUDE]
             }
         }
@@ -118,13 +119,12 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
-
-                    redirectTo(auth.currentUser)
+                    redirectTo(auth.currentUser, dbRef, this)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
                     Snackbar.make(btnLoginWithGoogle, "Authentication Failed.", Snackbar.LENGTH_LONG).show()
-                    redirectTo(null)
+                    redirectTo(auth.currentUser, dbRef, this)
                 }
 
                 hideProgressDialog()
@@ -152,16 +152,16 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
                 "19" /* minimumVersion */)
             .build()
 
-        if(!isValidEmail(etEmail.text.toString())){
-            etEmail.error = "Enter email Id !"
+        if(!isValidEmail(etDonorNum.text.toString())){
+            etDonorNum.error = "Enter email Id !"
             return
         }
 
-        auth.sendSignInLinkToEmail(etEmail.text.toString(), actionCodeSettings)
+        auth.sendSignInLinkToEmail(etDonorNum.text.toString(), actionCodeSettings)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Log.d(TAG, "Email sent.")
-                    Stash.put("email",etEmail.text.toString())
+                    Stash.put("email",etDonorNum.text.toString())
                     Snackbar.make(btnLoginWithEmail,"We sent you an email with a login link. If you can't find, check your junk folder.",Snackbar.LENGTH_INDEFINITE).show()
                 } else {
                     Log.e(TAG, "ErrorSendEmail: " + task.exception.toString())
@@ -184,23 +184,25 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             if (auth.isSignInWithEmailLink(intentLink)) {
                 showProgressDialog()
                 // Retrieve this from wherever you stored it
-                val email = Stash.getString("email")
-                Stash.clear("email")
+                val email =
+
 
                 // The client SDK will parse the code from the link for you.
-                auth.signInWithEmailLink("patelshubh96@hotmail.com", intentLink)
+                auth.signInWithEmailLink(Stash.getString("email"), intentLink)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Log.d(TAG, "Successfully signed in with email link!")
                             val result = task.result
                             if (result != null) {
-                                redirectTo(result.user)
+                                redirectTo(auth.currentUser, dbRef, this)
                             }
 
                         } else {
                             Log.e(TAG, "Error signing in with email link", task.exception)
                             hideProgressDialog()
                         }
+                        Stash.clear("email")
+                        hideProgressDialog()
                     }
         }
 
@@ -218,7 +220,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
         // Google sign out
         googleSignInClient.signOut().addOnCompleteListener(this) {
-            redirectTo(null)
+            redirectTo(auth.currentUser, dbRef, this)
         }
     }
 
@@ -228,37 +230,11 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
         // Google revoke access
         googleSignInClient.revokeAccess().addOnCompleteListener(this) {
-            redirectTo(null)
+            redirectTo(auth.currentUser, dbRef, this)
         }
     }
 
-    private fun redirectTo(user: FirebaseUser?) {
 
-        if (user != null) {
-            Log.i(TAG, "Login User:"+user.displayName)
-            dbRef.document(user.uid).get()
-                .addOnSuccessListener { document ->
-                    if (document.data != null) {
-                        hideProgressDialog()
-                        Log.d(TAG, "DocumentSnapshot data: " + document.data)
-                        startActivity(Intent(this, MainActivity::class.java))
-
-                    } else {
-                        hideProgressDialog()
-                        Log.d(TAG, "No such document")
-                        startActivity(Intent(this, RegistrationActivity::class.java))
-                    }
-                    finish()
-                }
-                .addOnFailureListener { exception ->
-                    Log.d(TAG, "get failed with ", exception)
-                }
-
-        } else {
-            Log.e(TAG, "Failed")
-            Snackbar.make(btnLoginWithGoogle, "Login failed. Please try again",Snackbar.LENGTH_SHORT).show()
-        }
-    }
 
     override fun onClick(v: View) {
         val i = v.id

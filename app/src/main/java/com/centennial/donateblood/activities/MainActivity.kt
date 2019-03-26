@@ -19,9 +19,10 @@ import androidx.fragment.app.FragmentTransaction
 import com.centennial.donateblood.R
 import com.centennial.donateblood.fragments.HomeFragment
 import com.centennial.donateblood.fragments.MapViewFragment
+import com.centennial.donateblood.fragments.RequestListFragment
+import com.centennial.donateblood.models.User
 import com.centennial.donateblood.utils.BaseActivity
 import com.centennial.donateblood.utils.Constants
-import com.centennial.donateblood.utils.User
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -95,7 +96,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 com.centennial.donateblood.R.id.menuAppointment ->
                     fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, HomeFragment()).commit()
                 com.centennial.donateblood.R.id.menuAbout ->
-                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, HomeFragment()).commit()
+                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, RequestListFragment()).commit()
             }
         },250)
         drawer.closeDrawer(GravityCompat.START)

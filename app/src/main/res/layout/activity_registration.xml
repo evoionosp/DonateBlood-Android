@@ -14,7 +14,8 @@
                 android:layout_height="@dimen/saperator_height"
                 android:background="@color/colorAccent"/>
         <androidx.appcompat.widget.AppCompatTextView
-                android:text="@string/title_personal_details"
+                android:text="@string/title_reg_id"
+                android:id="@+id/tvID"
                 android:textStyle="bold"
                 android:background="@color/colorAccent"
                 android:textColor="@color/white"
@@ -158,14 +159,14 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilEmail"
+                android:id="@+id/tilDonorNum"
                 android:layout_marginTop="@dimen/space_small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etEmail"
-                    android:inputType="textEmailAddress"
-                    android:hint="@string/reg_email_hint"
+                    android:id="@+id/etDonorNum"
+                    android:inputType="number"
+                    android:hint="@string/reg_donor_num_hint"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>

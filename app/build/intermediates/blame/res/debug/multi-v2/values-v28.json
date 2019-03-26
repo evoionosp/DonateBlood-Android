@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\STUDY\\Centennial_MAD\\SEM_2\\ANDROID_726\\DonateBlood\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
+            "outputFile": "/Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Local User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.2.aar\\306dcd9735cb1de5bbaa40f409ccee46\\res\\values-v28\\values-v28.xml",
+                    "source": "/Users/shubh/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0-alpha03.aar/b8a88e8018a7b4bdad8e5f0f94d166d8/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

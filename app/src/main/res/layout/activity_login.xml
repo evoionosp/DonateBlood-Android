@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etEmail"
+                    android:id="@+id/etDonorNum"
                     android:inputType="textEmailAddress"
                     android:hint="@string/reg_email_hint"
                     android:layout_width="match_parent"

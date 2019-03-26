@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.thyrlian:AwesomeValidation:v4.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-AwesomeValidation-v4.2.aar/6f32d9c7d5282d67e89ad09a610c9fdf/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-AwesomeValidation-v4.2.aar/6f32d9c7d5282d67e89ad09a610c9fdf/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-AwesomeValidation-v4.2.aar/e44c52b9830c62835cda015d39aac474/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-AwesomeValidation-v4.2.aar/e44c52b9830c62835cda015d39aac474/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.thyrlian/AwesomeValidation/v4.2/4bd5c4d999049bbc337d99a6c870f2dfb37ddf09/AwesomeValidation-v4.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.thyrlian/AwesomeValidation/v4.2/9b9aa4fa34abf15353f3014648ad8aae23d30fad/AwesomeValidation-v4.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
