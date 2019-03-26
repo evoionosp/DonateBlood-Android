@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:card_view="http://schemas.android.com/apk/res-auto"
+		xmlns:app="http://schemas.android.com/tools"
+		android:id="@+id/card_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="3dp"
+		card_view:cardBackgroundColor="@android:color/white"
+		card_view:cardCornerRadius="2dp"
+		card_view:cardElevation="3dp">
+	
+	
+	<androidx.appcompat.widget.LinearLayoutCompat
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:orientation="vertical">
+		
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tv_main"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="10dp"
+				android:textColor="@color/colorAccentDark"
+				android:text="@string/hospital_name"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+		
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tv_mid"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="10dp"
+				android:layout_marginStart="10dp"
+				android:textColor="@color/colorPrimaryDark"
+				android:text="@string/blood_group"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+		
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tv_other"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginBottom="10dp"
+				android:textColor="@color/navyBlue"
+				android:text="@string/expire_in"
+				android:textSize="12sp"
+				android:textStyle="italic" />
+		
+		<com.lovejjfg.powertext.LabelTextView
+				android:id="@+id/tv_status"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="end"
+				android:layout_margin="20dp"
+				android:lineSpacingExtra="10dp"
+				android:textSize="16sp"
+				app:labelFillColor="true"
+				app:labelMargin="10dp"
+				app:labelPaddingHorizontal="4dp"
+				app:labelPaddingVertical="6dp"
+				app:labelStrokeColor="@color/colorAccent"
+				app:labelStrokeWidth="1dp"
+				app:labelStrokeRadius="4dp"
+				app:labelTextColor="@android:color/white"
+				app:labelTextSize="12sp"/>
+	</androidx.appcompat.widget.LinearLayoutCompat>
+	
+
+</androidx.cardview.widget.CardView>
