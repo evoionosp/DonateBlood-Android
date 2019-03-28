@@ -6,6 +6,9 @@ class Constants {
 
         //Firestore Ref Paths
         const val USER_DATA_REF: String = "USER_DB"
+        const val REQUEST_DATA_REF: String = "REQUEST_DB"
+
+        const val FCM_DEFAULT: String = "Broadcast"
 
         //Blood groups constants
         const val BG_A_POSITIVE: Int = 1

@@ -54,6 +54,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name="com.centennial.donateblood.activities.MapsActivity"
+            android:label="@string/title_activity_maps" >
+        </activity>
+        <activity
             android:name="com.centennial.donateblood.activities.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/FullScreen" >
@@ -83,7 +87,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name="com.centennial.donateblood.utils.BaseActivity" />
+        <activity android:name="com.centennial.donateblood.activities.BaseActivity" />
         <activity android:name="com.centennial.donateblood.activities.RegistrationActivity" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"

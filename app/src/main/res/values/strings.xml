@@ -76,10 +76,13 @@
 	<string name="title_activity_maps">Map</string>
 	<string name="logout">Logout</string>
 	<string name="reg_donor_num_hint">Donor Number (If you have one)</string>
-	<string name="title_reg_id">ID:</string>
+	<string name="title_reg_id">ID: </string>
 	<string name="hospital_name">Hospital Name</string>
 	<string name="blood_group">Blood Group</string>
 	<string name="hospital_address">Hospital Address</string>
 	<string name="expire_in">Expire in:</string>
+	
+	
+	<string name="default_notification_channel_id">default</string>
 
 </resources>

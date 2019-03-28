@@ -15,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "281923208529-uis657lli7filtomub3jk7rcnd5hh294.apps.googleusercontent.com",
+          "client_id": "281923208529-fq5vebla1alq11sd0rohbhqepucut86s.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.centennial.donateblood",
@@ -23,7 +23,7 @@
           }
         },
         {
-          "client_id": "281923208529-149a727tct34tdmm1s9qq9vmf0fpr666.apps.googleusercontent.com",
+          "client_id": "281923208529-efha0mksrqdumi7bn2l8nsavqo9h01s6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.centennial.donateblood",
@@ -31,13 +31,21 @@
           }
         },
         {
-          "client_id": "281923208529-fotp5i4po1iffo72ahvu6l2d91rhgo6a.apps.googleusercontent.com",
+          "client_id": "281923208529-2r43bmvkcs9j57qrgld0stfmq7e17fgc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.centennial.donateblood",
+            "certificate_hash": "d91c60b3bb1a148228659ae2dcc6a3a0789bfacb"
+          }
+        },
+        {
+          "client_id": "281923208529-v4rsk2sabv3ch9s8hqi31h5mjmnk96s1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAxITZudjqmWQIxv0sTxOmntQXxu8YE_oc"
+          "current_key": "AIzaSyDOabQB9Piz4Rw73mCSRPE4WxPNAmuYEN4"
         }
       ],
       "services": {
@@ -46,12 +54,7 @@
         },
         "appinvite_service": {
           "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "281923208529-fotp5i4po1iffo72ahvu6l2d91rhgo6a.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

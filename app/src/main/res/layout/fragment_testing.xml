@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+   <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+       <androidx.appcompat.widget.LinearLayoutCompat
+		       android:layout_width="match_parent"
+		       android:layout_height="match_parent"
+		       android:orientation="vertical">
+	       <androidx.appcompat.widget.AppCompatEditText
+			       android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:hint="@string/reg_postalcode_hint"
+	       android:id="@+id/testPostal"/>
+	       <androidx.appcompat.widget.AppCompatEditText
+			       android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:hint="Unit"
+			       android:id="@+id/testUnits"/>
+	       <androidx.appcompat.widget.AppCompatSpinner
+			       android:id="@+id/spBloodgroup"
+			       android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:entries="@array/BloodGroup"/>
+	       <androidx.appcompat.widget.AppCompatButton
+			       android:text="Test Request"
+			       android:id="@+id/btnSendReq"
+			       android:layout_width="match_parent"
+			       android:layout_height="wrap_content"/>
+       </androidx.appcompat.widget.LinearLayoutCompat>
+   </RelativeLayout>
+
+</FrameLayout>

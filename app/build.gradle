@@ -49,6 +49,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-invites:16.1.1'
     implementation 'com.google.firebase:firebase-database:16.1.0'
     implementation 'com.google.firebase:firebase-firestore:18.1.0'
+    implementation 'com.google.firebase:firebase-messaging:17.5.0'
+    implementation 'android.arch.work:work-runtime:1.0.0'
 
     //implementation 'com.pixplicity.easyprefs:library:1.8.1@aar'
     implementation 'com.fxn769:stash:1.3.2'

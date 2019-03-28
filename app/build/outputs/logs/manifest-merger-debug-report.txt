@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-66:12
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-73:12
+INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-73:12
+INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-73:12
+INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-73:12
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/shubh/.gradle/caches/transforms-1/files-1.1/multidex-2.0.0.aar/48f5e911303e9f0c6f0a2b4938515602/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.santalu:mask-edittext:1.1.1] /Users/shubh/.gradle/caches/transforms-1/files-1.1/mask-edittext-1.1.1.aar/d0b2a15a5f43b0d7b18dd277439aad47/AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.thyrlian:AwesomeValidation:v4.2] /Users/shubh/.gradle/caches/transforms-1/files-1.1/jetified-AwesomeValidation-v4.2.aar/e44c52b9830c62835cda015d39aac474/AndroidManifest.xml:2:1-11:12
@@ -80,20 +80,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shubh/.gradle/c
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shubh/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/8f55bb2918a83fb69fdb45c1a2e6b650/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/shubh/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/fc42445697fdfaa96ecc07fb0663c35b/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0-alpha03] /Users/shubh/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.1.0-alpha03.aar/a51e73e550069c1e0c3e7b7a604c4425/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-66:12
-INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-66:12
+INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-73:12
+INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-73:12
+INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-73:12
 	package
 		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:3:11-47
 		INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-66:12
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-73:12
 		INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-66:12
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:1-73:12
 		INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:2:11-69
@@ -124,7 +124,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /U
 	android:name
 		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:11:19-61
 application
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:13:2-64:16
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:13:2-71:16
 MERGED from [com.github.santalu:mask-edittext:1.1.1] /Users/shubh/.gradle/caches/transforms-1/files-1.1/mask-edittext-1.1.1.aar/d0b2a15a5f43b0d7b18dd277439aad47/AndroidManifest.xml:11:5-20
 MERGED from [com.github.santalu:mask-edittext:1.1.1] /Users/shubh/.gradle/caches/transforms-1/files-1.1/mask-edittext-1.1.1.aar/d0b2a15a5f43b0d7b18dd277439aad47/AndroidManifest.xml:11:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /Users/shubh/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/ff50c592454f4613ff07805a622e38d9/AndroidManifest.xml:9:5-20
@@ -217,64 +217,70 @@ ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateB
 		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:33:5-44
 	android:name
 		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:32:5-50
+activity#com.centennial.donateblood.activities.MapsActivity
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:35:3-38:14
+	android:label
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:37:5-48
+	android:name
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:36:5-44
 activity#com.centennial.donateblood.activities.SplashActivity
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:34:3-42:14
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:39:3-48:14
 	android:configChanges
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:36:5-66
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:41:5-66
 	android:theme
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:37:5-38
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:42:5-38
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:35:5-46
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:40:5-46
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:38:4-41:20
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:43:4-47:20
 action#android.intent.action.MAIN
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:39:5-56
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:44:5-56
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:39:13-54
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:44:13-54
 category#android.intent.category.LAUNCHER
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:40:5-64
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:46:5-64
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:40:15-62
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:46:15-62
 activity#com.centennial.donateblood.activities.LoginActivity
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:43:3-55:14
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:49:3-63:14
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:43:13-53
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:49:13-53
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:donatebloodca.page.link+data:host:donatebloodca.page.link+data:scheme:http+data:scheme:https
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:44:4-54:20
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:50:4-62:20
 action#android.intent.action.VIEW
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:45:5-56
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:51:5-56
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:45:13-54
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:51:13-54
 category#android.intent.category.DEFAULT
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:46:5-63
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:53:5-63
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:46:15-61
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:53:15-61
 category#android.intent.category.BROWSABLE
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:47:5-65
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:54:5-65
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:47:15-63
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:54:15-63
 data
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:48:5-50:31
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:56:5-58:31
 	android:host
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:49:7-45
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:57:7-45
 	android:scheme
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:50:7-29
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:58:7-29
 activity#com.centennial.donateblood.activities.MainActivity
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:56:3-60:14
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:64:3-68:14
 	android:screenOrientation
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:58:5-41
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:66:5-41
 	android:theme
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:59:5-48
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:67:5-48
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:57:5-44
-activity#com.centennial.donateblood.utils.BaseActivity
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:61:3-49
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:65:5-44
+activity#com.centennial.donateblood.activities.BaseActivity
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:69:3-54
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:61:13-47
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:69:13-52
 activity#com.centennial.donateblood.activities.RegistrationActivity
-ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:62:3-62
+ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:70:3-62
 	android:name
-		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:62:13-60
+		ADDED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml:70:13-60
 uses-sdk
 INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/src/main/AndroidManifest.xml

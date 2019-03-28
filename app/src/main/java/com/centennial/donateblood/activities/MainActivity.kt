@@ -17,11 +17,10 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentTransaction
 import com.centennial.donateblood.R
-import com.centennial.donateblood.fragments.HomeFragment
 import com.centennial.donateblood.fragments.MapViewFragment
 import com.centennial.donateblood.fragments.RequestListFragment
+import com.centennial.donateblood.fragments.TestingFragment
 import com.centennial.donateblood.models.User
-import com.centennial.donateblood.utils.BaseActivity
 import com.centennial.donateblood.utils.Constants
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
@@ -44,7 +43,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private lateinit var user: User
     private lateinit var auth: FirebaseAuth
     private lateinit var userDB: FirebaseFirestore
-    private lateinit var dbRef: CollectionReference
+    private lateinit var userDBRef: CollectionReference
 
     private lateinit var fragmentTransaction: FragmentTransaction
 
@@ -62,14 +61,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         auth = FirebaseAuth.getInstance()
         userDB= FirebaseFirestore.getInstance()
-        dbRef = userDB.collection(Constants.USER_DATA_REF)
+        userDBRef = userDB.collection(Constants.USER_DATA_REF)
         firebaseUser = auth.currentUser
         mHandler = Handler()
 
 
         navigationView.setNavigationItemSelectedListener(this)
         headerview = navigationView.getHeaderView(0)
-        fragmentTransaction = supportFragmentManager.beginTransaction()
+
 
 
 
@@ -79,7 +78,15 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         drawer.setDrawerListener(toggle)
         toggle.syncState()
 
+        redirectTo(firebaseUser, userDBRef, this)
 
+
+        subscribeFCM(user.postalCode.substring(0,2))
+        subscribeFCM("BG_"+user.bloodGroup)
+        loadUser()
+
+
+        fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, MapViewFragment()).commit()
 
 
@@ -88,13 +95,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         title = item.title
+        fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.setCustomAnimations(com.centennial.donateblood.R.anim.slide_in_left, com.centennial.donateblood.R.anim.slide_out_right)
         mHandler.postDelayed({
             when(item.itemId){
                 com.centennial.donateblood.R.id.menuMap ->
                     fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, MapViewFragment()).commit()
                 com.centennial.donateblood.R.id.menuAppointment ->
-                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, HomeFragment()).commit()
+                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, TestingFragment()).commit()
                 com.centennial.donateblood.R.id.menuAbout ->
                     fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, RequestListFragment()).commit()
             }
@@ -108,20 +116,19 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         var status = false
         if (firebaseUser != null) {
             Log.i(TAG, "Login User:"+ firebaseUser!!.displayName)
-            dbRef.document(firebaseUser!!.uid).get()
+            userDBRef.document(firebaseUser!!.uid).get()
                 .addOnSuccessListener { document ->
                     if (document.exists()) {
-                        hideProgressDialog()
                         Log.d(TAG, "DocumentSnapshot data: " + document.data)
                         user = document.toObject(User::class.java)!!
                         status = true
 
                     } else {
-                        hideProgressDialog()
                         Log.d(TAG, "No such document")
                         startActivity(Intent(this, RegistrationActivity::class.java))
+                        finish()
                     }
-                    finish()
+
                 }
                 .addOnFailureListener { exception ->
                     Log.d(TAG, "get failed with ", exception)
@@ -168,6 +175,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
 
+
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu to use in the action bar
         val inflater = menuInflater
@@ -183,6 +192,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
         return true
     }
+
+
+
 
     companion object {
         private val TAG = this::class.java.simpleName

@@ -17,7 +17,6 @@ import com.basgeekball.awesomevalidation.ValidationStyle
 import com.basgeekball.awesomevalidation.utility.custom.SimpleCustomValidation
 import com.centennial.donateblood.R
 import com.centennial.donateblood.models.User
-import com.centennial.donateblood.utils.BaseActivity
 import com.centennial.donateblood.utils.Constants
 import com.google.android.material.snackbar.Snackbar
 import com.google.common.collect.Range
@@ -38,7 +37,7 @@ class RegistrationActivity: BaseActivity() {
     private var firebaseUser: FirebaseUser? = null
     private lateinit var auth: FirebaseAuth
     private lateinit var userDB: FirebaseFirestore
-    private lateinit var dbRef: CollectionReference
+    private lateinit var userDBRef: CollectionReference
 
     private lateinit var mValidation: AwesomeValidation
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,8 +49,13 @@ class RegistrationActivity: BaseActivity() {
 
         auth = FirebaseAuth.getInstance()
         userDB= FirebaseFirestore.getInstance()
-        dbRef = userDB.collection(Constants.Companion.USER_DATA_REF)
+        userDBRef = userDB.collection(Constants.Companion.USER_DATA_REF)
         firebaseUser = auth.currentUser
+
+
+        redirectTo(firebaseUser, userDBRef, this)
+
+        tvID.text =  getString(R.string.title_reg_id) + firebaseUser!!.email
         addValidations(this)
 
         val date = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
@@ -84,7 +88,7 @@ class RegistrationActivity: BaseActivity() {
     fun addValidations(activity: Activity){
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etFirstname, "[a-zA-Z]+", com.centennial.donateblood.R.string.err_valid_name)
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etLastname, "[a-zA-Z]+", com.centennial.donateblood.R.string.err_valid_name)
-        mValidation.addValidation(activity, com.centennial.donateblood.R.id.etDonorNum, Patterns.EMAIL_ADDRESS, com.centennial.donateblood.R.string.err_valid_email)
+  //      mValidation.addValidation(activity, com.centennial.donateblood.R.id.etDonorNum, Patterns.EMAIL_ADDRESS, com.centennial.donateblood.R.string.err_valid_email)
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etMobile, Patterns.PHONE, com.centennial.donateblood.R.string.err_valid_tel)
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etPostalCode, "[A-Z][0-9][A-Z] [0-9][A-Z][0-9]", com.centennial.donateblood.R.string.err_valid_email)
         mValidation.addValidation(activity, com.centennial.donateblood.R.id.etWeight, Range.atLeast(110), com.centennial.donateblood.R.string.err_not_eligible)
@@ -132,6 +136,7 @@ class RegistrationActivity: BaseActivity() {
     }
 
     fun submitForm() {
+        showProgressDialog()
        if (mValidation.validate()){
            if(checkEligibility()) {
                if(firebaseUser != null){
@@ -149,7 +154,7 @@ class RegistrationActivity: BaseActivity() {
                    user.isEligible = true
                    user.lastDonationDate = DateTime.now().minusYears(1).toDate()
 
-                   dbRef.document(user.UID).set(user)
+                   userDBRef.document(user.UID).set(user)
                        .addOnSuccessListener {
                            Log.d(TAG, "DocumentSnapshot successfully written!")
                            startActivity(Intent(this, MainActivity::class.java))
@@ -158,6 +163,7 @@ class RegistrationActivity: BaseActivity() {
                        .addOnFailureListener {
                                e -> Log.e(TAG, "Error writing document", e)
                            Snackbar.make(llCheckbox, "Failed to store data. Make sure you're connected to internet and try again !", Snackbar.LENGTH_LONG).show()
+                           hideProgressDialog()
                        }
 
                } else {
@@ -165,13 +171,13 @@ class RegistrationActivity: BaseActivity() {
                    finish()
                }
            } else {
+               hideProgressDialog()
                AlertDialog.Builder(this)
                    .setTitle(getString(com.centennial.donateblood.R.string.title_check_eligibility))
                    .setMessage(getString(com.centennial.donateblood.R.string.err_not_eligible))
                    .setNeutralButton(R.string.ok){_,_ ->
                        //dismiss
                    }
-
                    // Specifying a listener allows you to take an action before dismissing the dialog.
                    // The dialog is automatically dismissed when a dialog button is clicked.
                    .setIcon(android.R.drawable.ic_dialog_alert)
