@@ -19,7 +19,7 @@ class SplashActivity : BaseActivity() {
 
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var userDB: FirebaseFirestore
+    private lateinit var firestore: FirebaseFirestore
     private lateinit var userDBRef: CollectionReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +27,8 @@ class SplashActivity : BaseActivity() {
         setContentView(com.centennial.donateblood.R.layout.activity_splash)
 
         auth = FirebaseAuth.getInstance()
-        userDB= FirebaseFirestore.getInstance()
-        userDBRef = userDB.collection(Constants.USER_DATA_REF)
+        firestore= FirebaseFirestore.getInstance()
+        userDBRef = firestore.collection(Constants.USER_DATA_REF)
 
         FirebaseInstanceId.getInstance().instanceId
             .addOnCompleteListener(OnCompleteListener { task ->

@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatActivity
 import com.centennial.donateblood.R
@@ -17,6 +18,8 @@ import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.messaging.FirebaseMessaging
 
 open class BaseActivity : AppCompatActivity() {
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +44,10 @@ open class BaseActivity : AppCompatActivity() {
         }
     }
 
+    fun showToast(txt: String, duration: Int){
+        Toast.makeText(this, txt, duration).show()
+    }
+
     fun hideKeyboard(view: View) {
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
@@ -52,11 +59,11 @@ open class BaseActivity : AppCompatActivity() {
         hideProgressDialog()
     }
 
-    fun redirectTo(user: FirebaseUser?, dbRef: CollectionReference, activity: AppCompatActivity) {
+    fun redirectTo(firebaseUser: FirebaseUser?, dbRef: CollectionReference, activity: AppCompatActivity) {
 
-        if (user != null) {
-            Log.i(activity::class.java.simpleName, "Login User:" + user.displayName)
-            dbRef.document(user.uid).get()
+        if (firebaseUser != null) {
+            Log.i(activity::class.java.simpleName, "Login User:" + firebaseUser.email)
+            dbRef.document(firebaseUser.uid).get()
                 .addOnSuccessListener { document ->
                     if (document.data != null) {
                         Log.d(activity::class.java.simpleName, "DocumentSnapshot data: " + document.data)

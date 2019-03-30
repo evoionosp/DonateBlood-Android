@@ -1,9 +1,10 @@
 package com.centennial.donateblood.models
 
-import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.ServerTimestamp
+import java.util.*
 
 
-data class Request (val RequestID: String = ""){
+data class Request(val RequestID: String = "") {
 
     var orgName: String = ""
     var orgAddress: String = ""
@@ -11,7 +12,9 @@ data class Request (val RequestID: String = ""){
     var personName: String = ""
     var personContact: String = ""
     var bloodGroup: Int = 0
-    var timestampCreated = FieldValue.serverTimestamp()
+    var units: Int = 0
+    @ServerTimestamp
+    var timestampCreated: Date = Date()
 
 
     companion object {

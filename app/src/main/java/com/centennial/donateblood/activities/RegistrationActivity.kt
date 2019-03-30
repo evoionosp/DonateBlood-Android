@@ -36,7 +36,7 @@ class RegistrationActivity: BaseActivity() {
     private lateinit var myCalendar: Calendar
     private var firebaseUser: FirebaseUser? = null
     private lateinit var auth: FirebaseAuth
-    private lateinit var userDB: FirebaseFirestore
+    private lateinit var firestore: FirebaseFirestore
     private lateinit var userDBRef: CollectionReference
 
     private lateinit var mValidation: AwesomeValidation
@@ -48,8 +48,8 @@ class RegistrationActivity: BaseActivity() {
         mValidation = AwesomeValidation(ValidationStyle.BASIC)
 
         auth = FirebaseAuth.getInstance()
-        userDB= FirebaseFirestore.getInstance()
-        userDBRef = userDB.collection(Constants.Companion.USER_DATA_REF)
+        firestore= FirebaseFirestore.getInstance()
+        userDBRef = firestore.collection(Constants.Companion.USER_DATA_REF)
         firebaseUser = auth.currentUser
 
 
@@ -148,6 +148,7 @@ class RegistrationActivity: BaseActivity() {
                    user.firstName = etFirstname.text.toString()
                    user.lastName = etLastname.text.toString()
                    user.isMale = rb_male.isChecked
+                   user.emailID = firebaseUser!!.email!!
                    user.phoneNumber = etMobile.rawText.toString()
                    user.weight = etWeight.rawText!!.toInt()
                    user.postalCode = etPostalCode.text.toString()

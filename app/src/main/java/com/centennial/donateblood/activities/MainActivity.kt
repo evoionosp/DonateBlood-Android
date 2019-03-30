@@ -16,6 +16,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentTransaction
+import com.bumptech.glide.Glide
 import com.centennial.donateblood.R
 import com.centennial.donateblood.fragments.MapViewFragment
 import com.centennial.donateblood.fragments.RequestListFragment
@@ -29,6 +30,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.nav_header_main.view.*
 
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -42,7 +44,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private var firebaseUser: FirebaseUser? = null
     private lateinit var user: User
     private lateinit var auth: FirebaseAuth
-    private lateinit var userDB: FirebaseFirestore
+    private lateinit var firestore: FirebaseFirestore
     private lateinit var userDBRef: CollectionReference
 
     private lateinit var fragmentTransaction: FragmentTransaction
@@ -60,8 +62,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         drawer = findViewById<DrawerLayout>(com.centennial.donateblood.R.id.drawer_layout)
 
         auth = FirebaseAuth.getInstance()
-        userDB= FirebaseFirestore.getInstance()
-        userDBRef = userDB.collection(Constants.USER_DATA_REF)
+        firestore= FirebaseFirestore.getInstance()
+        userDBRef = firestore.collection(Constants.USER_DATA_REF)
         firebaseUser = auth.currentUser
         mHandler = Handler()
 
@@ -81,8 +83,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         redirectTo(firebaseUser, userDBRef, this)
 
 
-        subscribeFCM(user.postalCode.substring(0,2))
-        subscribeFCM("BG_"+user.bloodGroup)
+
         loadUser()
 
 
@@ -111,34 +112,32 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         return true
     }
 
-    private fun loadUser(): Boolean {
+    private fun loadUser() {
 
-        var status = false
-        if (firebaseUser != null) {
-            Log.i(TAG, "Login User:"+ firebaseUser!!.displayName)
-            userDBRef.document(firebaseUser!!.uid).get()
-                .addOnSuccessListener { document ->
-                    if (document.exists()) {
-                        Log.d(TAG, "DocumentSnapshot data: " + document.data)
-                        user = document.toObject(User::class.java)!!
-                        status = true
+        userDBRef.document(firebaseUser!!.uid).get()
+            .addOnSuccessListener { document ->
+                if (document.data != null) {
 
-                    } else {
-                        Log.d(TAG, "No such document")
-                        startActivity(Intent(this, RegistrationActivity::class.java))
-                        finish()
-                    }
+                    Log.d(activity::class.java.simpleName, "DocumentSnapshot data: " + document.data)
+
+                    user = document.toObject(User::class.java)!!
+
+                    headerview.navUser.text = user.firstName + " "+user.lastName
+                    headerview.navPhone.text = user.emailID
+
+                    Glide
+                        .with(this)
+                        .load(firebaseUser!!.photoUrl)
+                        .centerCrop()
+                        .placeholder(R.drawable.ic_person)
+                        .into(headerview.navImage)
 
                 }
-                .addOnFailureListener { exception ->
-                    Log.d(TAG, "get failed with ", exception)
-                }
 
-        } else {
-            Log.e(TAG, "User not logged in.")
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
-        return status
+                subscribeFCM(user.postalCode.substring(0,3))
+                subscribeFCM("BG_"+user.bloodGroup)
+            }
+
     }
 
     private fun logoutUser(){

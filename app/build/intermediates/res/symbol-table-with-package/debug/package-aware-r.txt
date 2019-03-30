@@ -1283,7 +1283,7 @@ id blocking
 id bottom
 id btnLoginWithEmail
 id btnLoginWithGoogle
-id btnMap
+id btnSendReq
 id buttonPanel
 id cancel_action
 id card_view
@@ -1349,6 +1349,7 @@ id fragment_container
 id frame_splash
 id fullscreen_content
 id ghost_view
+id glide_custom_view_target_tag
 id gone
 id group_divider
 id home
@@ -1412,7 +1413,7 @@ id progress_horizontal
 id radio
 id rb_female
 id rb_male
-id recycler_view
+id recyclerView
 id regSubmit
 id rg_sex
 id right
@@ -1473,6 +1474,8 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id terrain
+id testPostal
+id testUnits
 id text
 id text2
 id textSpacerNoButtons
@@ -1593,9 +1596,9 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
-layout fragment_home
 layout fragment_list
 layout fragment_maps
+layout fragment_testing
 layout map_cluster_icon
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1682,6 +1685,7 @@ string common_signin_button_text_long
 string connected
 string continue_with_email
 string continue_with_google
+string default_notification_channel_id
 string default_web_client_id
 string done
 string eligible_age
@@ -1703,6 +1707,7 @@ string error_signin
 string expire_in
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fcm_fallback_notification_channel_label
 string female
 string firebase_database_url
 string gcm_defaultSenderId

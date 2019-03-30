@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/shubh/Documents/STUDY/Centennial_MAD/SEM_2/ANDROID_726/DonateBlood/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "D:\\STUDY\\Centennial_MAD\\SEM_2\\ANDROID_726\\DonateBlood\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/shubh/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0-alpha03.aar/b8a88e8018a7b4bdad8e5f0f94d166d8/res/values-large-v4/values-large-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,114,185,256,326,396,464,532,636",
-                        "endColumns": "58,70,70,69,69,67,67,103,115",
-                        "endOffsets": "109,180,251,321,391,459,527,631,747"
-                    }
-                },
-                {
-                    "source": "/Users/shubh/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/a325e5eb56ab03b3cbe774e515e9dd33/res/values-large-v4/values-large-v4.xml",
+                    "source": "C:\\Users\\Local User\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.0.0.aar\\32494db1fc10d4b27646df851f27905d\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -28,6 +18,16 @@
                         "startOffsets": "752,874",
                         "endColumns": "121,133",
                         "endOffsets": "869,1003"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Local User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha03.aar\\3d47673626accf0907707888a07d3e92\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
                     }
                 }
             ]

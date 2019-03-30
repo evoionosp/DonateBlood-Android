@@ -34,7 +34,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
     // [START declare_auth]
     private lateinit var auth: FirebaseAuth
-    private lateinit var userDB: FirebaseFirestore
+    private lateinit var firestore: FirebaseFirestore
     private lateinit var userDBRef: CollectionReference
 
     // [END declare_auth]
@@ -61,8 +61,8 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
         // Initialize Firebase Entities
         auth = FirebaseAuth.getInstance()
-        userDB= FirebaseFirestore.getInstance()
-        userDBRef = userDB.collection(Constants.Companion.USER_DATA_REF)
+        firestore= FirebaseFirestore.getInstance()
+        userDBRef = firestore.collection(Constants.Companion.USER_DATA_REF)
 
 
 

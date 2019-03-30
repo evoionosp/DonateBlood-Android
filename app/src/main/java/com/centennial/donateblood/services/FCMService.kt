@@ -1,5 +1,5 @@
 
-package com.google.firebase.quickstart.fcm.kotlin
+package com.centennial.donateblood.services
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -10,11 +10,9 @@ import android.media.RingtoneManager
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
-import androidx.work.OneTimeWorkRequest
-import androidx.work.WorkManager
 import com.centennial.donateblood.R
 import com.centennial.donateblood.activities.MainActivity
-import com.centennial.donateblood.utils.MyWorker
+
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
@@ -47,7 +45,7 @@ class FCMService : FirebaseMessagingService() {
                                 sendNotification(remoteMessage.data.getOrDefault("blood_group", "Donate Blood"), "Emergency: Blood required at "+remoteMessage.data.getOrDefault("hospital_name", "Hospital"))
                         } else {
 
-                                if (remoteMessage.data.get("blood_group") != null && remoteMessage.data.get("hospital_name") != null){
+                                if (remoteMessage.data.get("bloodgroup") != null && remoteMessage.data.get("organization") != null){
 
                                         sendNotification(remoteMessage.data.get("blood_group").toString(), "Emergency: Blood required at "+remoteMessage.data.get("hospital_name"))
                                 } else {
@@ -77,12 +75,6 @@ class FCMService : FirebaseMessagingService() {
 
         }
 
-        private fun scheduleJob() {
-                // [START dispatch_job]
-                val work = OneTimeWorkRequest.Builder(MyWorker::class.java).build()
-                WorkManager.getInstance().beginWith(work).enqueue()
-                // [END dispatch_job]
-        }
 
 
         private fun sendNotification(title: String, messageBody: String) {
