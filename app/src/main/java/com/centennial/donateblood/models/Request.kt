@@ -10,7 +10,9 @@ data class Request(val RequestID: String = "") {
     var orgAddress: String = ""
     var orgPostalCode: String = ""
     var personName: String = ""
-    var personContact: String = ""
+    var contactNumber: String = ""
+    var contactEmail: String = ""
+    var hospitalID: String = ""
     var bloodGroup: Int = 0
     var units: Int = 0
     @ServerTimestamp

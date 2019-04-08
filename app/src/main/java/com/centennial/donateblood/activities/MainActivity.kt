@@ -80,7 +80,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         drawer.setDrawerListener(toggle)
         toggle.syncState()
 
-        redirectTo(firebaseUser, userDBRef, this)
+
 
 
 
@@ -114,6 +114,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     private fun loadUser() {
 
+        redirectTo(firebaseUser, userDBRef, this)
+
         userDBRef.document(firebaseUser!!.uid).get()
             .addOnSuccessListener { document ->
                 if (document.data != null) {
@@ -122,8 +124,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
                     user = document.toObject(User::class.java)!!
 
-                    headerview.navUser.text = user.firstName + " "+user.lastName
-                    headerview.navPhone.text = user.emailID
+                    headerview.navUserName.text = user.firstName + " "+user.lastName
+                    headerview.navEmail.text = user.emailID
 
                     Glide
                         .with(this)
@@ -138,6 +140,21 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 subscribeFCM("BG_"+user.bloodGroup)
             }
 
+
+        headerview.setOnClickListener {
+            onHeaderClick()
+        }
+
+    }
+
+
+    private fun onHeaderClick(){
+        var intent = Intent(activity, MainActivity::class.java)
+        var bundle = Bundle()
+        bundle.putString("uid", firebaseUser!!.uid)
+        bundle.putBoolean("isEdit", true)
+        intent.putExtras(bundle)
+        startActivity(intent)
     }
 
     private fun logoutUser(){

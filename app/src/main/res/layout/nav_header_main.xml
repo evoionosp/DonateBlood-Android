@@ -19,7 +19,7 @@
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             android:text="Login / Register"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:id="@+id/navUser"
+            android:id="@+id/navUserName"
             android:textSize="20dp"
             android:clickable="true"
             android:layout_toEndOf="@+id/navImage"
@@ -41,16 +41,15 @@
         android:layout_gravity="center" />
 
     <TextView
-        android:id="@+id/navPhone"
+        android:id="@+id/navEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="User ID"
         android:clickable="true"
-        android:onClick="onClickLogin"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/navUser"
-        android:layout_alignLeft="@+id/navUser"
-        android:layout_alignBottom="@id/navUser"
+        android:layout_toEndOf="@+id/navUserName"
+        android:layout_alignLeft="@+id/navUserName"
+        android:layout_alignBottom="@id/navUserName"
         android:layout_marginBottom="-1dp"/>
 
 </RelativeLayout>

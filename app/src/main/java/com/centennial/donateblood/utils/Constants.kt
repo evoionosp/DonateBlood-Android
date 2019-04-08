@@ -6,6 +6,7 @@ class Constants {
 
         //Firestore Ref Paths
         const val USER_DATA_REF: String = "USER_DB"
+        const val HOSPITAL_DATA_REF: String = "HOSPITAL_DB"
         const val REQUEST_DATA_REF: String = "REQUEST_DB"
 
         const val FCM_DEFAULT: String = "Broadcast"

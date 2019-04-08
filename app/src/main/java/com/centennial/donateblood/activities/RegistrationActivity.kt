@@ -53,6 +53,8 @@ class RegistrationActivity: BaseActivity() {
         firebaseUser = auth.currentUser
 
 
+
+
         redirectTo(firebaseUser, userDBRef, this)
 
         tvID.text =  getString(R.string.title_reg_id) + firebaseUser!!.email
