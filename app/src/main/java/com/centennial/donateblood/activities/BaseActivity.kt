@@ -4,6 +4,8 @@ package com.centennial.donateblood.activities
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,8 +13,11 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.centennial.donateblood.R
 import com.centennial.donateblood.utils.Constants
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -24,6 +29,8 @@ open class BaseActivity : AppCompatActivity() {
 
 
     lateinit var userDBRef: CollectionReference
+    lateinit var requestDBRef: CollectionReference
+    lateinit var orgDBRef: CollectionReference
     lateinit var firestore: FirebaseFirestore
     lateinit var auth: FirebaseAuth
 
@@ -35,6 +42,8 @@ open class BaseActivity : AppCompatActivity() {
 
         firestore= FirebaseFirestore.getInstance()
         userDBRef = firestore.collection(Constants.USER_DATA_REF)
+        requestDBRef = firestore.collection(Constants.REQUEST_DATA_REF)
+        orgDBRef = firestore.collection(Constants.HOSPITAL_DATA_REF)
         auth = FirebaseAuth.getInstance()
     }
 
@@ -121,6 +130,26 @@ open class BaseActivity : AppCompatActivity() {
                 Log.d(TAG, "Subscribed: $channel")
             }
 
+    }
+
+    fun generateBitmapDescriptorFromRes(
+        context: Context, resId: Int
+    ): BitmapDescriptor {
+        val drawable = ContextCompat.getDrawable(context, resId)
+        drawable!!.setBounds(
+            0,
+            0,
+            drawable.intrinsicWidth,
+            drawable.intrinsicHeight
+        )
+        val bitmap = Bitmap.createBitmap(
+            drawable.intrinsicWidth,
+            drawable.intrinsicHeight,
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        drawable.draw(canvas)
+        return BitmapDescriptorFactory.fromBitmap(bitmap)
     }
 
     companion object {

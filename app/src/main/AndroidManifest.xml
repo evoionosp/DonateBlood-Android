@@ -20,8 +20,6 @@
 			android:roundIcon="@mipmap/ic_launcher_round"
 			android:supportsRtl="true"
 			android:theme="@style/AppTheme">
-		<activity android:name=".activities.RequestDetailsActivity">
-		</activity>
 		
 		<meta-data
 				android:name="com.google.android.geo.API_KEY"
@@ -70,7 +68,13 @@
 				android:theme="@style/AppTheme.NoActionBar">
 		</activity>
 		<activity android:name=".activities.BaseActivity"/>
-		<activity android:name=".activities.RegistrationActivity"/>
+		<activity android:name=".activities.RegistrationActivity">
+		
+		</activity>
+		<activity android:name=".activities.RequestDetailsActivity"
+		android:theme="@style/AppTheme.NoActionBar">
+		
+		</activity>
 	</application>
 
 </manifest>

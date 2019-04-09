@@ -192,8 +192,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            com.centennial.donateblood.R.id.menuLogout -> {
+            R.id.menuLogout -> {
                 logoutUser()
+            }
+            R.id.menuPP -> {
+                startActivity(Intent(activity, RequestDetailsActivity::class.java))
             }
         }
         return true

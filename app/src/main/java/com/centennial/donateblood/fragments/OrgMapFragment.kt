@@ -25,7 +25,10 @@ import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GooglePlayServicesUtil
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.maps.*
-import com.google.android.gms.maps.model.*
+import com.google.android.gms.maps.model.CameraPosition
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.firestore.FirebaseFirestore
 
 
@@ -65,15 +68,6 @@ class OrgMapFragment : BaseFragment(), OnMapReadyCallback,
 
 
     override fun onMapReady(googleMap: GoogleMap) {
-        mGoogleMap = googleMap
-        googleMap.setOnMapLoadedCallback {
-            googleMap.animateCamera(
-                CameraUpdateFactory.newLatLngBounds(
-                    CANADA,
-                    0
-                )
-            )
-        }
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(activity!!,
@@ -99,10 +93,11 @@ class OrgMapFragment : BaseFragment(), OnMapReadyCallback,
                     var org = document.toObject(Hospital::class.java)
                     var markerOptions = getMarkerFromAddress(mContext, org.postalCode, org.name)
                     if(markerOptions != null)
-                        markerOptions.icon(BitmapDescriptorFactory
-                            .fromResource(R.drawable.ic_local_hospital_red_48dp))
+                        markerOptions.icon(generateBitmapDescriptorFromRes(mContext, R.drawable.ic_person_pin_circle_blue_48dp))
 
                     googleMap.addMarker(markerOptions)
+
+                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markerOptions!!.position, 13F))
 
 
                 }
@@ -142,12 +137,6 @@ class OrgMapFragment : BaseFragment(), OnMapReadyCallback,
         }
         return null
     }
-
-
-
-
-
-
 
 
     private fun checkLocationPermission() {

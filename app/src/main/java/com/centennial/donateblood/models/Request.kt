@@ -2,6 +2,7 @@ package com.centennial.donateblood.models
 
 import com.google.firebase.firestore.ServerTimestamp
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 data class Request(val RequestID: String = "") {
@@ -15,6 +16,7 @@ data class Request(val RequestID: String = "") {
     var hospitalID: String = ""
     var bloodGroup: Int = 0
     var units: Int = 0
+    var responds: List<String> = ArrayList()
     @ServerTimestamp
     var timestampCreated: Date = Date()
 

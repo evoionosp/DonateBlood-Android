@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.centennial.donateblood.R
-import kotlinx.android.synthetic.main.fragment_about.*
+import kotlinx.android.synthetic.main.fragment_about.view.*
 
 
 class AboutUsFragment : BaseFragment() {
@@ -23,21 +23,21 @@ class AboutUsFragment : BaseFragment() {
         setHasOptionsMenu(true)
         activity!!.title = getString(R.string.about_us)
 
-        cardShubh.setOnClickListener {
+        rootView.cardShubh.setOnClickListener {
                 val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"+getString(R.string.shubh_email)))
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Blood Donate")
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "Sent from Blood Donate App")
                 startActivity(Intent.createChooser(emailIntent, "Send Email to Developer"))
             }
 
-        cardDiego.setOnClickListener {
+        rootView.cardDiego.setOnClickListener {
             val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"+getString(R.string.diego_email)))
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Blood Donate")
             emailIntent.putExtra(Intent.EXTRA_TEXT, "Sent from Blood Donate App")
             startActivity(Intent.createChooser(emailIntent, "Send Email to Developer"))
         }
 
-        cardForum.setOnClickListener {
+        rootView.cardForum.setOnClickListener {
             val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"+getString(R.string.forum_email)))
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Blood Donate")
             emailIntent.putExtra(Intent.EXTRA_TEXT, "Sent from Blood Donate App")
