@@ -9,7 +9,7 @@ class Constants {
         const val HOSPITAL_DATA_REF: String = "HOSPITAL_DB"
         const val REQUEST_DATA_REF: String = "REQUEST_DB"
 
-        const val FCM_DEFAULT: String = "Broadcast"
+        const val FCM_DEFAULT: String = "GLOBAL"
 
         //Blood groups constants
         const val BG_A_POSITIVE: Int = 1

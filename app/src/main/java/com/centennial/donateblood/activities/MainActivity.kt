@@ -18,17 +18,11 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentTransaction
 import com.bumptech.glide.Glide
 import com.centennial.donateblood.R
-import com.centennial.donateblood.fragments.MapViewFragment
-import com.centennial.donateblood.fragments.RequestListFragment
-import com.centennial.donateblood.fragments.TestingFragment
+import com.centennial.donateblood.fragments.*
 import com.centennial.donateblood.models.User
-import com.centennial.donateblood.utils.Constants
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.CollectionReference
-import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 
@@ -43,9 +37,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     private var firebaseUser: FirebaseUser? = null
     private lateinit var user: User
-    private lateinit var auth: FirebaseAuth
-    private lateinit var firestore: FirebaseFirestore
-    private lateinit var userDBRef: CollectionReference
 
     private lateinit var fragmentTransaction: FragmentTransaction
 
@@ -61,9 +52,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         navigationView = findViewById<NavigationView>(R.id.navigation_view)
         drawer = findViewById<DrawerLayout>(com.centennial.donateblood.R.id.drawer_layout)
 
-        auth = FirebaseAuth.getInstance()
-        firestore= FirebaseFirestore.getInstance()
-        userDBRef = firestore.collection(Constants.USER_DATA_REF)
+
         firebaseUser = auth.currentUser
         mHandler = Handler()
 
@@ -88,7 +77,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
 
         fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, MapViewFragment()).commit()
+        fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, DonorMapFragment()).commit()
 
 
 
@@ -100,12 +89,16 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         fragmentTransaction.setCustomAnimations(com.centennial.donateblood.R.anim.slide_in_left, com.centennial.donateblood.R.anim.slide_out_right)
         mHandler.postDelayed({
             when(item.itemId){
-                com.centennial.donateblood.R.id.menuMap ->
-                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, MapViewFragment()).commit()
+                com.centennial.donateblood.R.id.menuDonorMap ->
+                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, DonorMapFragment()).commit()
+                com.centennial.donateblood.R.id.menuHospitalMap ->
+                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, OrgMapFragment()).commit()
+                com.centennial.donateblood.R.id.menuRequestList ->
+                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, RequestListFragment()).commit()
                 com.centennial.donateblood.R.id.menuAppointment ->
                     fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, TestingFragment()).commit()
                 com.centennial.donateblood.R.id.menuAbout ->
-                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, RequestListFragment()).commit()
+                    fragmentTransaction.replace(com.centennial.donateblood.R.id.fragment_container, AboutUsFragment()).commit()
             }
         },250)
         drawer.closeDrawer(GravityCompat.START)
@@ -149,11 +142,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
 
     private fun onHeaderClick(){
-        var intent = Intent(activity, MainActivity::class.java)
-        var bundle = Bundle()
-        bundle.putString("uid", firebaseUser!!.uid)
-        bundle.putBoolean("isEdit", true)
-        intent.putExtras(bundle)
+        var intent = Intent(activity, RegistrationActivity::class.java)
+        intent.putExtra("isEdit", false)
         startActivity(intent)
     }
 

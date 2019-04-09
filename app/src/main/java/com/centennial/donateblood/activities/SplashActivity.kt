@@ -6,7 +6,6 @@ import android.util.Log
 import com.centennial.donateblood.utils.Constants
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.iid.FirebaseInstanceId
 
@@ -18,9 +17,7 @@ import com.google.firebase.iid.FirebaseInstanceId
 class SplashActivity : BaseActivity() {
 
 
-    private lateinit var auth: FirebaseAuth
-    private lateinit var firestore: FirebaseFirestore
-    private lateinit var userDBRef: CollectionReference
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

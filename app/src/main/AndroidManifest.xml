@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.centennial.donateblood">
-	
 	<!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -9,6 +8,8 @@
     -->
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 	
 	<application
 			android:name=".InitClass"
@@ -19,24 +20,22 @@
 			android:roundIcon="@mipmap/ic_launcher_round"
 			android:supportsRtl="true"
 			android:theme="@style/AppTheme">
+		<activity android:name=".activities.RequestDetailsActivity">
+		</activity>
 		
-
 		<meta-data
 				android:name="com.google.android.geo.API_KEY"
 				android:value="@string/google_maps_key"/>
-		
 		<meta-data
 				android:name="com.google.firebase.messaging.default_notification_channel_id"
-				android:value="@string/default_notification_channel_id" />
-		
+				android:value="@string/default_notification_channel_id"/>
 		<meta-data
 				android:name="com.google.firebase.messaging.default_notification_color"
-				android:resource="@color/colorAccent" />
-		
+				android:resource="@color/colorAccent"/>
 		
 		<service android:name=".services.FCMService">
 			<intent-filter>
-				<action android:name="com.google.firebase.MESSAGING_EVENT" />
+				<action android:name="com.google.firebase.MESSAGING_EVENT"/>
 			</intent-filter>
 		</service>
 		

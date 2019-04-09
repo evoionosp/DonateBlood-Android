@@ -12,19 +12,30 @@ import android.widget.Toast
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatActivity
 import com.centennial.donateblood.R
+import com.centennial.donateblood.utils.Constants
 import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.messaging.FirebaseMessaging
 
 open class BaseActivity : AppCompatActivity() {
 
+
+    lateinit var userDBRef: CollectionReference
+    lateinit var firestore: FirebaseFirestore
+    lateinit var auth: FirebaseAuth
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         FirebaseApp.initializeApp(applicationContext)
+
+        firestore= FirebaseFirestore.getInstance()
+        userDBRef = firestore.collection(Constants.USER_DATA_REF)
+        auth = FirebaseAuth.getInstance()
     }
 
     @VisibleForTesting

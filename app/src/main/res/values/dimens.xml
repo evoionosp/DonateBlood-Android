@@ -31,4 +31,13 @@
     <dimen name="font_l">25sp</dimen>
     <dimen name="font_s">15sp</dimen>
     <dimen name="font_m">20sp</dimen>
+    
+    
+    <dimen name="Text_Large">30dp</dimen>
+    <dimen name="Text_Mid">20dp</dimen>
+    <dimen name="Text_Small">15dp</dimen>
+ 
+    
+
+    <dimen name="card_album_radius">4dp</dimen>
 </resources>

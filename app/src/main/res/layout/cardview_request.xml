@@ -2,7 +2,6 @@
 <androidx.cardview.widget.CardView
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:card_view="http://schemas.android.com/apk/res-auto"
-		xmlns:app="http://schemas.android.com/tools"
 		android:id="@+id/card_view"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -50,23 +49,6 @@
 				android:textSize="12sp"
 				android:textStyle="italic" />
 		
-		<com.lovejjfg.powertext.LabelTextView
-				android:id="@+id/tv_status"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_gravity="end"
-				android:layout_margin="20dp"
-				android:lineSpacingExtra="10dp"
-				android:textSize="16sp"
-				app:labelFillColor="true"
-				app:labelMargin="10dp"
-				app:labelPaddingHorizontal="4dp"
-				app:labelPaddingVertical="6dp"
-				app:labelStrokeColor="@color/colorAccent"
-				app:labelStrokeWidth="1dp"
-				app:labelStrokeRadius="4dp"
-				app:labelTextColor="@android:color/white"
-				app:labelTextSize="12sp"/>
 	</androidx.appcompat.widget.LinearLayoutCompat>
 	
 

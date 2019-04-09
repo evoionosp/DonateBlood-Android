@@ -10,8 +10,10 @@ import android.util.Log
 import android.util.Patterns
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 import com.basgeekball.awesomevalidation.AwesomeValidation
 import com.basgeekball.awesomevalidation.ValidationStyle
 import com.basgeekball.awesomevalidation.utility.custom.SimpleCustomValidation
@@ -22,7 +24,6 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.common.collect.Range
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_registration.*
 import org.joda.time.DateTime
@@ -35,11 +36,10 @@ class RegistrationActivity: BaseActivity() {
 
     private lateinit var myCalendar: Calendar
     private var firebaseUser: FirebaseUser? = null
-    private lateinit var auth: FirebaseAuth
-    private lateinit var firestore: FirebaseFirestore
-    private lateinit var userDBRef: CollectionReference
 
     private lateinit var mValidation: AwesomeValidation
+
+    private var isEdit = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.centennial.donateblood.R.layout.activity_registration)
@@ -53,9 +53,18 @@ class RegistrationActivity: BaseActivity() {
         firebaseUser = auth.currentUser
 
 
+            if(!intent.getBooleanExtra("isEdit", true)){
+                isEdit = false
+                switchEditMode(isEdit)
+
+            } else {
+                Log.e(TAG, "isEdit: True")
+                redirectTo(firebaseUser, userDBRef, this)
+
+            }
 
 
-        redirectTo(firebaseUser, userDBRef, this)
+
 
         tvID.text =  getString(R.string.title_reg_id) + firebaseUser!!.email
         addValidations(this)
@@ -65,7 +74,7 @@ class RegistrationActivity: BaseActivity() {
             myCalendar.set(Calendar.YEAR, year)
             myCalendar.set(Calendar.MONTH, monthOfYear)
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
-            updateLabel()
+            updateLabel(myCalendar.time)
         }
 
         etDOB.setOnClickListener {
@@ -79,11 +88,11 @@ class RegistrationActivity: BaseActivity() {
         }
     }
 
-    private fun updateLabel() {
+    private fun updateLabel(date: Date) {
         val myFormat = "MM/dd/yyyy" //In which you need put here
         val sdf = SimpleDateFormat(myFormat, Locale.US)
 
-        etDOB.setText(sdf.format(myCalendar.time))
+        etDOB.setText(sdf.format(date))
     }
 
 
@@ -138,9 +147,9 @@ class RegistrationActivity: BaseActivity() {
     }
 
     fun submitForm() {
-        showProgressDialog()
        if (mValidation.validate()){
            if(checkEligibility()) {
+               showProgressDialog()
                if(firebaseUser != null){
 
                    val user = User(firebaseUser!!.uid)
@@ -190,8 +199,74 @@ class RegistrationActivity: BaseActivity() {
     }
 
 
+    private fun switchEditMode(enable: Boolean) {
+
+
+
+        etDOB.isEnabled = enable
+        spBloodgroup.isEnabled = enable
+        etDonorNum.isEnabled = enable
+        etFirstname.isEnabled = enable
+        etLastname.isEnabled = enable
+        rb_male.isEnabled = enable
+        rg_sex.isEnabled = enable
+        etMobile.isEnabled = enable
+        etWeight.isEnabled = enable
+        etPostalCode.isEnabled = enable
+
+
+        userDBRef.document(firebaseUser!!.uid).get()
+            .addOnSuccessListener { document ->
+                if (document.data != null) {
+                    var user = document.toObject(User::class.java)
+                    if(user != null) setData(user)
+                }
+            }
+            .addOnFailureListener {
+                Log.e(TAG, "Failed to fetch User data:" +it.stackTrace)
+                showToast("Error: Please try again", Toast.LENGTH_SHORT)
+                redirectTo(firebaseUser, userDBRef, this)
+            }
+
+        invalidateOptionsMenu()
+    }
+
+
+    private fun setData (user: User) {
+
+        myCalendar.time = user.birthDate
+        updateLabel(myCalendar.time)
+
+        spBloodgroup.setSelection(user.bloodGroup)
+        etDonorNum.setText(user.donorNumber)
+        etFirstname.setText(user.firstName)
+        etLastname.setText(user.lastName)
+        rb_male.isChecked = user.isMale
+        user.isMale = rb_male.isChecked
+        etMobile.setText(user.phoneNumber)
+        etWeight.setText(""+user.weight)
+        etPostalCode.setText(user.postalCode)
+
+
+
+        llCheckbox.visibility = View.GONE
+//        cbAge.visibility = View.GONE
+//        cbBaby.visibility = View.GONE
+//        cbMedicine.visibility = View.GONE
+//        cbSurgery.visibility = View.GONE
+//        cbUK.visibility = View.GONE
+//        cbUS.visibility = View.GONE
+//        cbWeight.visibility = View.GONE
+//        cbTattoo.visibility = View.GONE
+
+
+
+    }
+
     fun checkEligibility(): Boolean {
-        return cbAge.isChecked && cbBaby.isChecked && cbMedicine.isChecked && cbSurgery.isChecked && cbUK.isChecked && cbUS.isChecked && cbWeight.isChecked && cbTattoo.isChecked
+
+        return if (llCheckbox.visibility == View.GONE) true
+        else cbAge.isChecked && cbBaby.isChecked && cbMedicine.isChecked && cbSurgery.isChecked && cbUK.isChecked && cbUS.isChecked && cbWeight.isChecked && cbTattoo.isChecked
 
     }
 
@@ -200,6 +275,13 @@ class RegistrationActivity: BaseActivity() {
         // Inflate the menu to use in the action bar
         val inflater = menuInflater
         inflater.inflate(com.centennial.donateblood.R.menu.registration_menu, menu)
+
+        var menuEdit: MenuItem =  menu.findItem(R.id.regEdit)
+        var menuSubmit: MenuItem = menu.findItem(R.id.regSubmit)
+
+        menuEdit.isVisible = !isEdit
+        menuSubmit.isVisible = isEdit
+
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -207,6 +289,11 @@ class RegistrationActivity: BaseActivity() {
         when (item.itemId) {
             com.centennial.donateblood.R.id.regSubmit -> {
                 submitForm()
+            }
+
+            R.id.regEdit -> {
+                isEdit = true
+                switchEditMode(isEdit)
             }
         }
         return true

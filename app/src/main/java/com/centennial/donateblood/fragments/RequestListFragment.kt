@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.centennial.donateblood.R
 import com.centennial.donateblood.models.Request
 import com.centennial.donateblood.utils.Constants
-import com.centennial.donateblood.utils.RecyclerItemClickListener
+import com.centennial.donateblood.utils.TimeAgo
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.FirebaseFirestore
@@ -31,6 +31,7 @@ class RequestListFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         setHasOptionsMenu(true)
+        activity!!.title = getString(R.string.donation_requests)
         rootView = inflater.inflate(R.layout.fragment_list, container, false)
         firestore = FirebaseFirestore.getInstance()
         query = firestore.collection(Constants.REQUEST_DATA_REF).orderBy("timestampCreated", Query.Direction.DESCENDING)
@@ -104,7 +105,7 @@ class RequestListFragment : BaseFragment() {
 
             requestViewHolder.title.text = request.orgName
             requestViewHolder.midTitle.text = "BloodGroup Required: " + Constants.BGArray[request.bloodGroup]
-            requestViewHolder.subTitle.text = request.orgAddress + ", " + request.orgPostalCode
+            requestViewHolder.subTitle.text =  TimeAgo().getTimeAgo(request.timestampCreated)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RequestViewHolder {

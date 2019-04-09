@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/nav_header_vertical_spacing"
+    android:contextClickable="true">
+    
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:text="@string/developed_by"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/margin_large"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_elevation"
+        android:elevation="@dimen/card_elevation"
+        android:id="@+id/cardShubh"
+        android:clickable="true"
+        android:focusable="true"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/shubh_dp"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/dp_shubh"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="Shubh Patel"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/Text_Mid" />
+
+                <TextView
+                    android:textSize="@dimen/Text_Small"
+                    android:text="@string/shubh_email"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@string/centennial_college"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="italic|bold"
+                    android:textSize="@dimen/Text_Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_elevation"
+            android:elevation="@dimen/card_elevation"
+            android:id="@+id/cardDiego"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardCornerRadius="@dimen/card_album_radius">
+        
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+            
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/diego_dp"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_person"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1">
+                
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:text="Diego Lopez"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="@dimen/Text_Mid" />
+                
+                <TextView
+                        android:textSize="@dimen/Text_Small"
+                        android:text="@string/diego_email"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                
+                <TextView
+                        android:text="@string/centennial_college"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="italic|bold"
+                        android:textSize="@dimen/Text_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+            
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_elevation"
+            android:elevation="@dimen/card_elevation"
+            android:id="@+id/cardForum"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardCornerRadius="@dimen/card_album_radius">
+        
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+            
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/forum_dp"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_person"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1">
+                
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:text="Forum Patel"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="@dimen/Text_Mid" />
+                
+                <TextView
+                        android:textSize="@dimen/Text_Small"
+                        android:text="@string/forum_email"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                
+                <TextView
+                        android:text="@string/centennial_college"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="italic|bold"
+                        android:textSize="@dimen/Text_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+            
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    
+    </androidx.cardview.widget.CardView>
+    
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -3,14 +3,21 @@ package com.centennial.donateblood.fragments
 
 import android.app.ProgressDialog
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.annotation.VisibleForTesting
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.centennial.donateblood.R
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+
 
 open class BaseFragment : Fragment() {
+
 
 
 
@@ -44,6 +51,27 @@ open class BaseFragment : Fragment() {
     override fun onStop() {
         super.onStop()
         hideProgressDialog()
+    }
+
+
+    fun generateBitmapDescriptorFromRes(
+        context: Context, resId: Int
+    ): BitmapDescriptor {
+        val drawable = ContextCompat.getDrawable(context, resId)
+        drawable!!.setBounds(
+            0,
+            0,
+            drawable.intrinsicWidth,
+            drawable.intrinsicHeight
+        )
+        val bitmap = Bitmap.createBitmap(
+            drawable.intrinsicWidth,
+            drawable.intrinsicHeight,
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        drawable.draw(canvas)
+        return BitmapDescriptorFactory.fromBitmap(bitmap)
     }
 
 

@@ -3,8 +3,14 @@
 
 
         <item
-            android:id="@+id/menuMap"
-            android:title="@string/map_view" />
+            android:id="@+id/menuDonorMap"
+            android:title="@string/donors_nearby" />
+        <item
+                android:id="@+id/menuHospitalMap"
+                android:title="@string/donation_centers" />
+        <item
+                android:id="@+id/menuRequestList"
+                android:title="@string/donation_requests" />
         <item
             android:id="@+id/menuAppointment"
             android:title="@string/book_appointment" />

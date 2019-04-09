@@ -46,11 +46,11 @@ class TestingFragment : BaseFragment() {
 
 
         val request = Request(requestDBRef.document().id)
-        request.orgName = "Name"
+        request.orgName = postalCode
         request.bloodGroup = bg
         request.orgAddress = "tmp address"
-        request.orgPostalCode = postalCode
-        request.personContact = "6478046665"
+        request.orgPostalCode = "M1G 3S8"
+        request.contactNumber = "6478046665"
         request.personName = "Shubh Patel"
         request.units = units
 

@@ -10,7 +10,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.centennial.donateblood.R
 import com.centennial.donateblood.extensions.IsNullOrEmpty
-import com.centennial.donateblood.utils.Constants
 import com.fxn.stash.Stash
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -22,8 +21,6 @@ import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
-import com.google.firebase.firestore.CollectionReference
-import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_login.*
 
 
@@ -33,9 +30,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 class LoginActivity : BaseActivity(), View.OnClickListener {
 
     // [START declare_auth]
-    private lateinit var auth: FirebaseAuth
-    private lateinit var firestore: FirebaseFirestore
-    private lateinit var userDBRef: CollectionReference
+
 
     // [END declare_auth]
 
@@ -59,10 +54,6 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        // Initialize Firebase Entities
-        auth = FirebaseAuth.getInstance()
-        firestore= FirebaseFirestore.getInstance()
-        userDBRef = firestore.collection(Constants.Companion.USER_DATA_REF)
 
 
 
