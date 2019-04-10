@@ -21,7 +21,6 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.fragment_list.view.*
-import java.util.*
 
 
 class RequestListFragment : BaseFragment() {
@@ -52,7 +51,7 @@ class RequestListFragment : BaseFragment() {
 
         rootView.recyclerView.affectOnItemClick(object : RecyclerItemClickListener.OnClickListener {
             override fun onItemClick(position: Int, view: View) {
-                showToast("Item positon: "+position+"itemID: "+requestAdapter.getItem(position).RequestID, Toast.LENGTH_LONG)
+                showToast("Item positon: "+position+"itemID: "+requestAdapter.getItem(position).requestID, Toast.LENGTH_LONG)
             }
         })
         return rootView
@@ -86,7 +85,6 @@ class RequestListFragment : BaseFragment() {
         override fun onBindViewHolder(requestViewHolder: RequestViewHolder, position: Int, request: Request) {
 
             try {
-                var date: Date = request.timestampCreated
                 requestViewHolder.title.text = request.orgName
                 requestViewHolder.midTitle.text = "BloodGroup Required: " + Constants.BGArray[request.bloodGroup]
                 requestViewHolder.subTitle.text =  TimeAgo().getTimeAgo(request.timestampCreated)

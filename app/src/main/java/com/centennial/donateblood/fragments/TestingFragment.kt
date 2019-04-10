@@ -45,6 +45,10 @@ class TestingFragment : BaseFragment() {
 
 
 
+
+
+
+
         val request = Request(requestDBRef.document().id)
         request.orgName = postalCode
         request.bloodGroup = bg
@@ -53,8 +57,11 @@ class TestingFragment : BaseFragment() {
         request.contactNumber = "6478046665"
         request.personName = "Shubh Patel"
         request.units = units
+        request.responds.put("user_${request.responds.size}", "shubh@gmail.com")
+        request.responds.put("user_${request.responds.size}", "diego@gmail.com")
 
-        requestDBRef.document(request.RequestID).set(request)
+
+        requestDBRef.document(request.requestID).set(request)
             .addOnSuccessListener {
                 Log.d(TAG, "Request DocumentSnapshot successfully written!")
                 showToast("Request: data stored",Toast.LENGTH_LONG)

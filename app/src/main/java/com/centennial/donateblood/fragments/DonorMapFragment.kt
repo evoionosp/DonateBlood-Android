@@ -108,6 +108,7 @@ class DonorMapFragment : BaseFragment(), OnMapReadyCallback,
                             generateBitmapDescriptorFromRes(mContext, R.drawable.ic_person_pin_circle_blue_48dp)
                         )
                         googleMap.addMarker(markerOptions)
+                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markerOptions.position, 13F))
 
                     }
                 }

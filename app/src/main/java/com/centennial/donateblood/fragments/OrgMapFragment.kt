@@ -69,6 +69,7 @@ class OrgMapFragment : BaseFragment(), OnMapReadyCallback,
 
     override fun onMapReady(googleMap: GoogleMap) {
 
+        mGoogleMap = googleMap
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(activity!!,
                     Manifest.permission.ACCESS_FINE_LOCATION)
@@ -92,12 +93,18 @@ class OrgMapFragment : BaseFragment(), OnMapReadyCallback,
                 for (document in result) {
                     var org = document.toObject(Hospital::class.java)
                     var markerOptions = getMarkerFromAddress(mContext, org.postalCode, org.name)
-                    if(markerOptions != null)
-                        markerOptions.icon(generateBitmapDescriptorFromRes(mContext, R.drawable.ic_person_pin_circle_blue_48dp))
+                    if(markerOptions != null) {
+                        markerOptions.icon(
+                            generateBitmapDescriptorFromRes(
+                                mContext,
+                                R.drawable.ic_local_hospital_red_48dp
+                            )
+                        )
 
-                    googleMap.addMarker(markerOptions)
+                        googleMap.addMarker(markerOptions)
 
-                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markerOptions!!.position, 13F))
+                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markerOptions.position, 13F))
+                    }
 
 
                 }
