@@ -13,7 +13,8 @@
                 android:title="@string/donation_requests" />
         <item
             android:id="@+id/menuAppointment"
-            android:title="@string/book_appointment" />
+            android:title="@string/book_appointment"
+            android:visible="false"/>
         <item
             android:id="@+id/menuAbout"
             android:title="@string/about_us" />
