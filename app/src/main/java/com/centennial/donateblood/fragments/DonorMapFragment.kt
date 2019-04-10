@@ -69,14 +69,6 @@ class DonorMapFragment : BaseFragment(), OnMapReadyCallback,
 
     override fun onMapReady(googleMap: GoogleMap) {
         mGoogleMap = googleMap
-        googleMap.setOnMapLoadedCallback {
-            googleMap.animateCamera(
-                CameraUpdateFactory.newLatLngBounds(
-                    CANADA,
-                    0
-                )
-            )
-        }
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(activity!!,
@@ -96,6 +88,8 @@ class DonorMapFragment : BaseFragment(), OnMapReadyCallback,
         var userDBRef = firestore.collection(Constants.USER_DATA_REF)
         var orgDBRef = firestore.collection(Constants.HOSPITAL_DATA_REF)
 
+        var tmp: MarkerOptions? = null
+
         userDBRef.get()
             .addOnSuccessListener { result ->
                 for (document in result) {
@@ -108,7 +102,8 @@ class DonorMapFragment : BaseFragment(), OnMapReadyCallback,
                             generateBitmapDescriptorFromRes(mContext, R.drawable.ic_person_pin_circle_blue_48dp)
                         )
                         googleMap.addMarker(markerOptions)
-                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markerOptions.position, 13F))
+                        tmp = markerOptions
+
 
                     }
                 }
@@ -116,6 +111,11 @@ class DonorMapFragment : BaseFragment(), OnMapReadyCallback,
             .addOnFailureListener { exception ->
                 Log.d(TAG, "Error getting documents: ", exception)
             }
+
+        if (tmp != null){
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(tmp!!.position, 13F))
+        }
+
 
      /*   orgDBRef.get()
             .addOnSuccessListener { result ->

@@ -88,6 +88,8 @@ class OrgMapFragment : BaseFragment(), OnMapReadyCallback,
         var userDBRef = firestore.collection(Constants.USER_DATA_REF)
         var orgDBRef = firestore.collection(Constants.HOSPITAL_DATA_REF)
 
+        var tmp: MarkerOptions? = null
+
         orgDBRef.get()
             .addOnSuccessListener { result ->
                 for (document in result) {
@@ -103,7 +105,7 @@ class OrgMapFragment : BaseFragment(), OnMapReadyCallback,
 
                         googleMap.addMarker(markerOptions)
 
-                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markerOptions.position, 13F))
+                        tmp = markerOptions
                     }
 
 
@@ -112,6 +114,13 @@ class OrgMapFragment : BaseFragment(), OnMapReadyCallback,
             .addOnFailureListener { exception ->
                 Log.d(TAG, "Error getting documents: ", exception)
             }
+
+
+        if (tmp != null){
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(tmp!!.position, 13F))
+        }
+
+
 
     }
 

@@ -43,13 +43,9 @@ class TestingFragment : BaseFragment() {
 
     private fun sendRequest(bg: Int, units: Int, postalCode: String){
 
+        val request = Request()
 
-
-
-
-
-
-        val request = Request(requestDBRef.document().id)
+        request.requestID = requestDBRef.document().id
         request.orgName = postalCode
         request.bloodGroup = bg
         request.orgAddress = "tmp address"

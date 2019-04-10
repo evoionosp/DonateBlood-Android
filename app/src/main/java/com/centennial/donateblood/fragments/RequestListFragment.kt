@@ -1,16 +1,17 @@
 package com.centennial.donateblood.fragments
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.centennial.donateblood.R
+import com.centennial.donateblood.activities.RequestDetailsActivity
 import com.centennial.donateblood.extensions.affectOnItemClick
 import com.centennial.donateblood.models.Request
 import com.centennial.donateblood.utils.Constants
@@ -51,7 +52,7 @@ class RequestListFragment : BaseFragment() {
 
         rootView.recyclerView.affectOnItemClick(object : RecyclerItemClickListener.OnClickListener {
             override fun onItemClick(position: Int, view: View) {
-                showToast("Item positon: "+position+"itemID: "+requestAdapter.getItem(position).requestID, Toast.LENGTH_LONG)
+                startActivity(Intent(activity, RequestDetailsActivity::class.java).putExtra("request_id", requestAdapter.getItem(position).requestID))
             }
         })
         return rootView
@@ -86,12 +87,12 @@ class RequestListFragment : BaseFragment() {
 
             try {
                 requestViewHolder.title.text = request.orgName
-                requestViewHolder.midTitle.text = "BloodGroup Required: " + Constants.BGArray[request.bloodGroup]
+                requestViewHolder.midTitle.text = "BloodGroup: " + Constants.BGArray[request.bloodGroup]
                 requestViewHolder.subTitle.text =  TimeAgo().getTimeAgo(request.timestampCreated)
 
             } catch(e: Exception) {
                 Log.e (TAG, "Error while loading data into viewHolder:"+e.localizedMessage)
-                showToast("Some data is missing. Please try again",Toast.LENGTH_LONG)
+                //showToast("Some data is missing. Please try again",Toast.LENGTH_LONG)
             }
 
 

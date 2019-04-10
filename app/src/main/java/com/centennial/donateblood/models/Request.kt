@@ -5,7 +5,7 @@ import java.util.*
 import kotlin.collections.HashMap
 
 
-data class Request(val requestID: String = "") {
+data class Request(var requestID: String = "") {
 
     var orgName: String = ""
     var orgAddress: String = ""

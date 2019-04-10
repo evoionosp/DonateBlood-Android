@@ -3,11 +3,14 @@ package com.centennial.donateblood.activities
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.view.animation.AnimationUtils
+import com.centennial.donateblood.R
 import com.centennial.donateblood.utils.Constants
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.iid.FirebaseInstanceId
+import kotlinx.android.synthetic.main.activity_splash.*
 
 
 /**
@@ -22,6 +25,8 @@ class SplashActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.centennial.donateblood.R.layout.activity_splash)
+
+        ivSplash.startAnimation(AnimationUtils.loadAnimation(this, R.anim.pulse))
 
         auth = FirebaseAuth.getInstance()
         firestore= FirebaseFirestore.getInstance()
